@@ -19,4 +19,4 @@ UTILIZAMOS MÉTODO ESTRELLA DE MAR:
 - No sobre exigirnos con la perfección en cada una de las áreas y tareas. Si obtenemos un buen resultado seguir adelante y no quedarnos en los detalles mínimos que no suman a la esencia del aprendizaje.
 
 5. **Dejar de hacer:**
--La idea es no dejar pasar tanto tiempo entre una reunión y otra. Poder tener momentos de encuentros mas seguidos.-        
+- La idea es no dejar pasar tanto tiempo entre una reunión y otra. Poder tener momentos de encuentros mas seguidos.-        
