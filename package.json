@@ -1,0 +1,23 @@
+{
+  "name": "grupo_2_tinokitos",
+  "version": "1.0.0",
+  "description": "Proyecto integrador:\r **INTEGRANTES**  \r NOS PRESENTAMOS:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Carolagot/grupo_2_tinokitos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Carolagot/grupo_2_tinokitos/issues"
+  },
+  "homepage": "https://github.com/Carolagot/grupo_2_tinokitos#readme",
+  "dependencies": {
+    "expres": "^0.0.5",
+    "express": "^4.18.1"
+  }
+}
