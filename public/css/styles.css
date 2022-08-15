@@ -6,6 +6,69 @@ body {
     font-family: 'Fraunces', serif;
 }
 
+.presentacion {
+    background-color: #f0bc68;
+    text-align: center;
+    justify-content: space-between;
+}
+
 .logo{
-   margin: auto;
+    width: 300px;
+}
+
+.banner{
+    width: 100;
+    padding: 15px 30px;
+
+}
+    
+.contenedor-hijo {
+display: flex;   
+justify-content: center;
+text-align: center;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+article img {
+    width: 15%;
+    opacity: 70%;
+    padding: 15px;
+    position: relative;
+  
+}
+
+.hora-de{
+background-color: #686f6a;
+color: white;
+margin: 0%;
+padding: 15px;
+position: absolute;
+left: 0%;
+bottom: 0%;
+}
+
+.portada {
+    width: 200;
+}
+
+.boton{
+    background-color: #f0bc68;
+    color: white;
+    margin-left: 45%;
+    border-color: white;
+    font-family: Fraunces semibold;
+    font-size: 20px;
+   
+    padding: 10px 10px;
+}
+
+@media (min-width ) {
+    article img {
+        width: 50%;
+    }
 }
