@@ -1,6 +1,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,300&family=Roboto:ital,wght@1,300&display=swap');
 
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #fff8f6;
     font-family: 'Fraunces', serif;
@@ -150,7 +155,130 @@ footer{
     display: none;
 }
 
-@media (min-width:760px){
+.banner-desktop{
+    display: none;
+}
+
+.banner-cel{ 
+    width: 100vw;
+    display: block; 
+    }
+
+
+.contenedor-imagenes-cel{
+      display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+ .contenedor-imagenes-desktop{
+    display: none;
+ }   
+
+    .producto {
+        position: relative;
+       
+       }   
+
+    .producto img {
+        width: 70vw;
+        height: 100%;
+        padding: 20px 15px;
+        display: flex;
+       
+    }    
+
+       .producto h1 {
+        color: white;
+        text-shadow: black 0.1em 0.1em 0.2em;
+        font-family: Fraunces semibold;
+        font-size: 22px;
+        width: 100%;
+        text-shadow: solid 1px black;
+        margin: center;
+        padding: 10px;
+        position: absolute;
+        top: 10%;
+        text-align: center;
+    }       
+
+    .producto h3 {
+        color: white;
+        font-size: 15px;
+        line-height: 23px;
+        text-shadow: black 0.1em 0.1em 0.2em;
+        margin: center;
+        padding: 15px;
+        position: absolute;
+        left: 2%;
+        top: 25%; 
+        text-align: center;
+    }
+
+    
+
+    .boton-ver {
+        background-color: #f0bc68;
+        color: black; 
+        font-weight: bold;
+        border-color: white;
+        font-size: 15px;
+        padding: 0 40px;
+        bottom: 10%;
+        position: absolute;
+        text-align: center;
+        left: 60px;
+    }
+
+
+    .boton{
+        width: 40vw;
+        background-color: #f0bc68;
+        color: white;
+        margin-left: 30%;
+        margin-top: 5%;
+        border-color: white;
+        font-family: "Fraunces semibold";
+        font-size: 20px;
+        padding: 10px 10px;
+    }
+
+    .contenedor-productos-cel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedor-productos-desktop {
+        display: none;
+    }
+
+    .ventas img {
+        width: 60vw;
+        height: 100%;
+        padding: 20px 15px;
+        display: flex;
+    }
+.productos-destacados-desktop {
+    display: none;
+}
+
+    .texto {
+        color: #686f6a;
+        text-align: center;
+        margin: center;
+        
+    }
+
+    .segundo-contenedor-productos-desktop {
+        display: none;
+    }
+
+
+
+@media (min-width:769px){
     .navSuperiorDesktop{
         display: flex;
     
@@ -177,7 +305,98 @@ footer{
     .contenedorFooter p{
        font-size: 16px;
     }
-    }
+
+.banner-cel {
+    display: none;
+}
+
+.banner-desktop {
+display: initial;
+display: flex;
+width: 100%;
+}
+
+.contenedor-imagenes-cel {
+    display: none;
+}
+.contenedor-imagenes-desktop {
+display: flex;
+justify-content: space-between;
+text-align: center;
+}
+
+.producto img {
+    width: 100%;
+}
+
+.producto h1 {
+    font-size: 25px;
+}
+
+.producto h3 {
+ font-size: 13px;
+ top: 30%; 
+}
+
+.boton-ver {
+    font-size: 15px;
+    left: 20%;
+    bottom: 15%;
+
+}
+.boton{
+    width: 30vw;
+    margin-left: 35%;
+    margin-top: 5%;
+    font-size: 25px;
+    padding: 10px 10px;
+}
+
+section .ofertas {
+    display: flex;
+}
+
+.productos-destacados-cel
+{
+    display: none;
+}
+
+.productos-destacados-desktop {
+    display: initial;
+    font-size: 20px;
+    color: #686f6a;
+    text-align: center;
+    font-family: "Fraunces semibold";
+}
+
+.contenedor-productos-cel
+{
+    display: none;
+}
+
+.contenedor-productos-desktop {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.ventas-desktop img {
+    box-sizing: border-box;
+    width: 90%;
+    height: 60%;
+    margin: 15px;
+
+}
+
+.texto {
+font-style: bold;
+font-size: 15px; 
+}
+
+}
+  
+
+     
 
 @media (min-width:1200px){
 .navBar{
@@ -186,6 +405,8 @@ footer{
 .contenedorFooter p{
     font-size: 20px;
  }
+
+
 }
 
 
