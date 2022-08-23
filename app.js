@@ -15,4 +15,11 @@
     res.sendFile(path.resolve(__dirname, './views/home.html'))
 })
 
+app.get ('/registro', function (req, res) {
+    res.sendFile (path.join (__dirname, '/views/registro.html'));
+});
+
+app.get ('/login', function (req, res) {
+    res.sendFile (path.join (__dirname, '/views/login.html'));
+});
 

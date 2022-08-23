@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,300&family=Roboto:ital,wght@1,300&display=swap');
+
+main{
+    background-color: #fff8f6;
+    font-family: 'Fraunces', serif;
+}
+.contenedorlogin{
+    margin-top: 50px;
+    display: flex;
+    width: 180px;
+    flex-direction: column;
+    margin-left: 85px;
+}
+.formato{
+    padding: 20px 5px;
+    margin: auto;
+    width: 80%;
+}
+.formato2{
+    margin:auto;
+  
+}
+input.login1{
+    border-radius: 5px;
+    border: solid 1px black;
+    width: 200px;
+}
+.cuenta{
+    background-color: #686f6a;
+    color: white;
+    margin-top: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-left: 25px;
+}
+
+.iniciar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    width: 150%;
+   }
+
+.subrayado{
+    text-decoration: underline;
+    margin-left: 10px;
+}
