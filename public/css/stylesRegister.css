@@ -11,32 +11,37 @@ body {
     justify-content: space-between;
     width: 100vw;
 }
-.navSuperiorMovile{
+
+.navSuperiorMovile {
     display: flex;
-    flex-direction:row ;
+    flex-direction: row;
     flex-wrap: nowrap;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
     width: 100vw;
 }
-.navSuperiorMovile img{
+
+.navSuperiorMovile img {
     width: 200px;
     margin: center;
 }
-.navSuperiorDesktop{
+
+.navSuperiorDesktop {
     display: none;
-    flex-direction:row ;
+    flex-direction: row;
     flex-wrap: nowrap;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     width: 100vw;
     padding: 8px;
 }
-.navSuperiorDesktop img{
+
+.navSuperiorDesktop img {
     width: 300px;
     margin: center;
 }
-.crearIniciarCarrito{
+
+.crearIniciarCarrito {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,16 +49,19 @@ body {
     color: #686f6a;
     text-decoration: none;
 }
-.crearIniciarCarrito a:link{
+
+.crearIniciarCarrito a:link {
     color: #686f6a;
     text-decoration: none;
 }
-.menu{
+
+.menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.menu i{
+
+.menu i {
     background-color: #c4d8d1;
     color: #686f6a;
     border-radius: 20%;
@@ -61,11 +69,12 @@ body {
     font-size: 30px;
 }
 
-.lupaYCarrito{
+.lupaYCarrito {
     display: flex;
     justify-content: space-between;
 }
-.navBar{
+
+.navBar {
     display: none;
     justify-content: space-around;
     align-items: center;
@@ -75,117 +84,230 @@ body {
     font-weight: bold;
     font-style: normal;
 }
-.navBar a{
+
+.navBar a {
     color: #686f6a;
     text-decoration: none;
 }
-footer{
+
+footer {
     background-color: #c4d8d1;
     width: 100vw;
 }
-.contenedorFooter{
+
+.contenedorFooter {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.footerProductos{
+
+.footerProductos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.footerNosotros{
+
+.footerNosotros {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.footerContacto{
+
+.footerContacto {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.footerContactanos{
+
+.footerContactanos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.footerRedes{
+
+.footerRedes {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-bottom: 30px;
 }
-.iconosFooter{
+
+.iconosFooter {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items:center ;
+    align-items: center;
     width: 50%;
     color: #686f6a;
 }
-.iconosFooter i{
+
+.iconosFooter i {
     font-size: 25px;
 }
-.contenedorFooter p{
+
+.contenedorFooter p {
     font-size: 20pt;
-    color:#ffffff;
+    color: #ffffff;
     font-style: normal;
     line-height: 2px;
 }
-.footerContactanos div{
-   color:#686f6a;
-   text-align: center;
+
+.footerContactanos div {
+    color: #686f6a;
+    text-align: center;
 }
-.contenedorFooter a{
+
+.contenedorFooter a {
     color: #686f6a;
     text-decoration: none;
 }
-.logoFooter{
+
+.logoFooter {
     display: none;
 }
 
-@media (min-width:760px){
-    .navSuperiorDesktop{
-        display: flex;
-    
-    }
-    .navSuperiorMovile{
-        display: none;
-    }
-    .navBar{
-        display: flex;
-        font-size: 20px;
-    }
-    .logoFooter{
-        display: flex;
-        width: 10%;
-        align-self: center;
-    }
-    .contenedorFooter{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: flex-start;
-    }
-    .contenedorFooter p{
-       font-size: 16px;
-    }
-    }
-
-@media (min-width:1200px){
-.navBar{
-    font-size: 26px;
-}
-.contenedorFooter p{
-    font-size: 20px;
- }
+* {
+    box-sizing: border-box;
 }
 
+.organizando {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.contenedor1 img {
+    width: 30vw;
+    margin-bottom: 0%;
+    display: none
+}
+
+.contenedor2 {
+    margin-top: 50px;
+    margin-left: 20px;
+    padding: 5px 5px;
+    width: 100%;
+}
+
+.registro1 {
+    margin: 5px 0 10px 0;
+    width: 100%;
+    padding: 5px;
+}
+
+.formato {
+    padding: 5px;
+    margin: 5px;
+}
+
+.formato3 {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    width: 80%;
+    height: 35px;
+
+}
+
+.cuenta {
+    background-color: #686f6a;
+    color: white;
+    margin-top: 0px;
+    font-size: 25px;
+    margin-left: 50px;
+}
+
+.borrar {
+    margin: 0 0 0 15px
+}
+
+.volver {
+    margin-left: 15px;
+}
+
+.iniciar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.subrayado {
+    text-decoration: underline;
+    margin-left: 20px;
+}
+
+    @media (min-width:769px) {
+        .cuenta {
+            background-color: #686f6a;
+            color: white;
+            margin-top: 0px;
+            font-size: 25px;
+            margin-left: 190px;
+        }
+
+        .volver {
+            margin-left: 15px;
+        }
+
+        .iniciar {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-left: 10px;
+        }
+
+        .subrayado {
+            text-decoration: underline;
+            margin-left: 20px;
+        }
 
 
+        .navSuperiorDesktop {
+            display: flex;
+
+        }
+
+        .navSuperiorMovile {
+            display: none;
+        }
+
+        .navBar {
+            display: flex;
+            font-size: 20px;
+        }
+
+        .logoFooter {
+            display: flex;
+            width: 10%;
+            align-self: center;
+        }
+
+        .contenedorFooter {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+        .contenedorFooter p {
+            font-size: 16px;
+        }
+    }
+
+    @media (min-width:1200px) {
+        .navBar {
+            font-size: 26px;
+        }
+
+        .contenedorFooter p {
+            font-size: 20px;
+        }
+    }
