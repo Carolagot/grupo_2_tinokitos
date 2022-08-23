@@ -261,6 +261,7 @@ footer{
         padding: 20px 15px;
         display: flex;
     }
+    
 .productos-destacados-desktop {
     display: none;
 }
@@ -356,8 +357,7 @@ section .ofertas {
     display: flex;
 }
 
-.productos-destacados-cel
-{
+.productos-destacados-cel {
     display: none;
 }
 
@@ -369,8 +369,7 @@ section .ofertas {
     font-family: "Fraunces semibold";
 }
 
-.contenedor-productos-cel
-{
+.contenedor-productos-cel {
     display: none;
 }
 
@@ -385,7 +384,6 @@ section .ofertas {
     width: 90%;
     height: 60%;
     margin: 15px;
-
 }
 
 .texto {
