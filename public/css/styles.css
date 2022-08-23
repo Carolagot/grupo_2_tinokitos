@@ -195,7 +195,6 @@ footer{
         font-family: Fraunces semibold;
         font-size: 22px;
         width: 100%;
-        text-shadow: solid 1px black;
         margin: center;
         padding: 10px;
         position: absolute;
@@ -216,7 +215,6 @@ footer{
         text-align: center;
     }
 
-    
 
     .boton-ver {
         background-color: #f0bc68;
@@ -228,7 +226,7 @@ footer{
         bottom: 10%;
         position: absolute;
         text-align: center;
-        left: 60px;
+        left: 25%;
     }
 
 
@@ -266,6 +264,13 @@ footer{
     display: none;
 }
 
+.productos-destacados-cel {
+    font-size: 15px;
+    color: #686f6a;
+    text-align: center;
+    font-family: "Fraunces semibold";
+}
+
     .texto {
         color: #686f6a;
         text-align: center;
@@ -277,6 +282,24 @@ footer{
         display: none;
     }
 
+
+@media (min-width:480px) {
+
+.producto h1 {
+    font-size: 30px;
+}
+.producto h3 {
+    font-size: 18px;
+    top: 35%;
+}
+
+.boton-ver {
+    font-size: 20px;
+    justify-content: center;
+    
+}
+
+}
 
 
 @media (min-width:769px){
@@ -331,20 +354,21 @@ text-align: center;
 }
 
 .producto h1 {
-    font-size: 25px;
+    font-size: 22px;
+    margin-top: auto;
 }
 
 .producto h3 {
  font-size: 13px;
- top: 30%; 
+ top: 20%; 
 }
 
 .boton-ver {
-    font-size: 15px;
+    font-size: 13px;
     left: 20%;
-    bottom: 15%;
-
+    text-align: center;
 }
+
 .boton{
     width: 30vw;
     margin-left: 35%;
