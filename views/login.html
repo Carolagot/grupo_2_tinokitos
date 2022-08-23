@@ -36,9 +36,9 @@
             </div>
             <img src="imagenes/logo achicado.jpg" alt="logo">
             <div class="crearIniciarCarrito">
-                <a href="#">Crear Sesión</a>
+                <a href="/register">Crear Sesión</a>
                 <p> | </p>
-                <a href="#">Iniciar Sesión</a>
+                <a href="/login">Iniciar Sesión</a>
                 <div class="carrito"><i class="fa-solid fa-cart-shopping"></i></div>
             </div>
         </div>
@@ -53,14 +53,32 @@
         </div>
 
     </header>
-
     <main>
+        <section class="contenedorlogin">
+            <form action="/login" method="GET">
+                <div>
+                    <div>
+                        <h4 class="formato"> MAIL</h4>
+                        <input class="login1" type="e-mail" name="mail" placeholder="Mail">
+                    </div>
 
+                    <div>
+                        <h4 class="formato"> CONTRASEÑA </h4>
+                        <input class="login1" type="password" name="contraseña"
+                            placeholder="Escribí aquí tu contraseña"><br>
+                    </div>
+                </div>
+            </form>
 
-
-
+            </div class="formato2">
+            <h4>¿Olvidaste tu contraseña?</h4>
+            <button class="cuenta"><a href="/login"> CREAR CUENTA</a></button>
+            <div class="iniciar">
+                <h4>¿Ya tenes una cuenta?</h4>
+                <h4 class="subrayado">Iniciar sesión</h4>
+            </div>
+        </section>
     </main>
-
 
     <footer>
         <div class="contenedorFooter">
@@ -86,13 +104,13 @@
                     Av. Alvear 1234<br>
                     hola@tinokitos.com.ar</div>
             </div>
-        <div class="footerRedes">
-            <p>Seguinos en redes!</p>
-            <div class="iconosFooter"><i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-pinterest"></i>
+            <div class="footerRedes">
+                <p>Seguinos en redes!</p>
+                <div class="iconosFooter"><i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                </div>
             </div>
-        </div>
 
     </footer>
 
