@@ -11,7 +11,10 @@ body {
     justify-content: space-between;
     width: 100vw;
 }
-
+.lupaYCarrito a:link{
+    color: #686f6a;
+    text-decoration: none;
+}
 .navSuperiorMovile {
     display: flex;
     flex-direction: row;

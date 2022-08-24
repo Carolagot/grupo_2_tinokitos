@@ -71,6 +71,11 @@ body {
     display: flex;
     justify-content: space-between;
 }
+.lupaYCarrito a:link{
+    color: #686f6a;
+    text-decoration: none;
+}
+
 .navBar{
     display: none;
     justify-content: space-around;
@@ -307,8 +312,6 @@ footer{
  }   
     
 }
-
-
 
 
 @media (min-width:769px){

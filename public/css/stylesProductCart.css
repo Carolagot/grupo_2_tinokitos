@@ -23,6 +23,10 @@ body {
     width: 200px;
     margin: center;
 }
+.lupaYCarrito a:link{
+    color: #686f6a;
+    text-decoration: none;
+}
 .navSuperiorDesktop{
     display: none;
     flex-direction:row ;

@@ -32,6 +32,10 @@ body {
     width: 100vw;
     padding: 8px;
 }
+.lupaYCarrito a:link{
+    color: #686f6a;
+    text-decoration: none;
+}
 .navSuperiorDesktop img{
     width: 300px;
     margin: center;
