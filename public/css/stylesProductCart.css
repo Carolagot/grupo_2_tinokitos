@@ -149,6 +149,35 @@ footer{
     display: none;
 }
 
+main p{
+    margin-left: 10px;
+}
+.navCarrito{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    background-color:#686f6a ;
+    color:#fff8f6 ;
+    font-size: 10px;
+    margin-right: 10px;
+}
+.producto1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    background-color:#fff8f6 ;
+    color:#686f6a ;
+    font-size: 10px;
+    margin-right: 10px;
+    position: relative;
+    left:-3%;
+}
+.producto1 img{
+ width: 8%;
+}
+
 @media (min-width:760px){
     .navSuperiorDesktop{
         display: flex;
