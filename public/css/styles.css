@@ -295,11 +295,20 @@ footer{
 
 .boton-ver {
     font-size: 20px;
-    justify-content: center;
+    justify-content: center; 
+    }
+ 
+ .boton {
+    width: 50vw;
+    margin-left: 25%;
+    margin-top: 5%;
+    font-size: 20px;
+    
+ }   
     
 }
 
-}
+
 
 
 @media (min-width:769px){
@@ -365,7 +374,7 @@ text-align: center;
 
 .boton-ver {
     font-size: 13px;
-    left: 20%;
+    left: 18%;
     text-align: center;
 }
 
@@ -373,7 +382,7 @@ text-align: center;
     width: 30vw;
     margin-left: 35%;
     margin-top: 5%;
-    font-size: 25px;
+    font-size: 20px;
     padding: 10px 10px;
 }
 
