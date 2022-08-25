@@ -62,18 +62,53 @@
             <h3>COLOR</h3>
             <h3>CANTIDAD</h3>
             <h3>SUBTOTAL</h3>
+            <i class="fa-solid fa-trash-can"></i>
         </div>
         <div class="producto1">
-                <img src="/imagenes/baberos-recortada.jpg" alt="baberos-silicona">
-            <h3>$2200</h3>
-            <select name="colores" id="colores">
-                <option value="rosa">ROSA</option>
-                <option value="rosa">CELESTE</option>
-                <option value="rosa">AMARILLO</option>
+            <div class="fotoYtexto">Babero de Silicona<img src="/imagenes/baberos-recortada.jpg" alt="baberos-silicona">
+            </div>
+            <h3>$2.200</h3>
+            <select class="colores" name="colores" id="colores">
+                <option class="rosa" value="rosa">ROSA</option>
+                <option class="celeste" value="celeste">CELESTE</option>
+                <option class="amarillo" value="amarillo">AMARILLO</option>
             </select>
             <h3>1</h3>
-            <h3>$2200</h3>
+            <h3>$2.200</h3>
+            <button><i class="fa-solid fa-trash-can"></i></button>
         </div>
+        <div class="producto1">
+            <div class="fotoYtexto">Silla de Comer<img src="/imagenes/silla-recortada.jpg" alt="silla-de-comer"></div>
+            <h3>$25.000</h3>
+            <select class="colores" name="colores" id="colores">
+                <option class="beige" value="beige">BEIGE</option>
+                <option class="azul" value="azul">AZUL</option>
+                <option class="rosa" value="rosa">ROSA</option>
+            </select>
+            <h3>1</h3>
+            <h3>$25.000</h3>
+            <button><i class="fa-solid fa-trash-can"></i></button>
+        </div>
+        <p class="total">TOTAL: $27.200</p>
+        <div class="envio">
+            <h3>FORMA DE ENVÍO<h3>
+            <select name="formaEnvio" id="formaEnvio">
+                <option value="correArgentino">Correo Argentino</option>
+                <option value="moto">Moto mensajería</option>
+                <option value="retira">Retira en Tinokitos</option>
+            </select>
+        </div>
+        <div class="envio">
+            <h3>FORMA DE PAGO<h3>
+            <select name="formaPago" id="formaPago">
+                <option value="efectivo">Efectivo</option>
+                <option value="tarjeta">Tarjeta de Crédito</option>
+                <option value="trasnferencia">Transferencia</option>
+            </select>
+        </div>
+        <input type="submit" value="COMPRAR" class="comprar">
+        <div class="volver"><a href="index" class="volver">Volver a la Tienda</a></div>
+
 
 
 
