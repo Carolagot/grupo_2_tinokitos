@@ -11,10 +11,7 @@ body {
     justify-content: space-between;
     width: 100vw;
 }
-.lupaYCarrito a:link{
-    color: #686f6a;
-    text-decoration: none;
-}
+
 .navSuperiorMovile {
     display: flex;
     flex-direction: row;
@@ -99,12 +96,11 @@ main {
 }
 
 .contenedorlogin {
-    margin-top: 50px;
     display: flex;
-    width: 180px;
     flex-direction: column;
-    margin-left: 85px;
-}
+    justify-content: center;
+    align-items: center;
+   }
 
 .formato {
     padding: 20px 5px;
@@ -124,12 +120,14 @@ input.login1 {
 }
 
 .cuenta {
-    background-color: #686f6a;
+    background-color:#c4d8d1;
     color: white;
     margin-top: 20px;
     font-size: 18px;
     border-radius: 5px;
-    margin-left: 25px;
+     }
+.cuenta:hover{
+    text-decoration: none;
 }
 
 .iniciar {
@@ -261,7 +259,7 @@ footer {
     }
 
     .contenedorlogin {
-        margin-left: 250px;
+        margin-left: 0px;
     }
 
     .iniciar {
@@ -276,5 +274,8 @@ footer {
 
     .contenedorFooter p {
         font-size: 20px;
+    }
+    .banner{
+        width: 110%;
     }
 }

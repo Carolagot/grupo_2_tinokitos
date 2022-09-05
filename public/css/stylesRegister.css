@@ -11,10 +11,6 @@ body {
     justify-content: space-between;
     width: 100vw;
 }
-.lupaYCarrito a:link{
-    color: #686f6a;
-    text-decoration: none;
-}
 
 .navSuperiorMovile {
     display: flex;
@@ -209,7 +205,9 @@ footer {
     padding: 5px;
     margin: 5px;
 }
-
+.formato2{
+    margin: 5px;
+}
 .formato3 {
     display: flex;
     align-items: stretch;
@@ -220,10 +218,10 @@ footer {
 }
 
 .cuenta {
-    background-color: #686f6a;
+    background-color: #c4d8d1;
     color: white;
     margin-top: 0px;
-    font-size: 25px;
+    font-size: 18px;
     margin-left: 50px;
 }
 
@@ -249,15 +247,15 @@ footer {
 
     @media (min-width:769px) {
         .cuenta {
-            background-color: #686f6a;
-            color: white;
+            background-color: #c4d8d1;
+            color: black;
             margin-top: 0px;
-            font-size: 25px;
-            margin-left: 190px;
+            font-size: 18px;
+            margin-left: 150px;
         }
 
         .volver {
-            margin-left: 15px;
+            margin-left: 20px;
         }
 
         .iniciar {
