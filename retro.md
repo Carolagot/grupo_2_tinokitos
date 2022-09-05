@@ -20,3 +20,27 @@ UTILIZAMOS MÉTODO ESTRELLA DE MAR:
 
 5. **Dejar de hacer:**
 - La idea es no dejar pasar tanto tiempo entre una reunión y otra. Poder tener momentos de encuentros mas seguidos.-        
+
+RETROSPECTIVA SPRINT 2 ENTREGABLE CON SPRINT 3:
+
+UTILIZAMOS MÉTODO ESTRELLA DE MAR:
+**Comenzar a hacer:**
+- Utilizar más el tablero Trello.
+- Reuniones del avance una vez por semana mínimo.
+- Compromiso de cada miembro de tener las cosas armadas antes para reverlas y no a último momento.
+
+
+2.	**Hacer más:**
+- Organización en relación a la división de tareas.
+- Estar atentas a que tengamos todas las tareas bien asignadas y divididas, no dejar nada librado al azar.
+
+3.	**Continuar haciendo:**
+- Comunicación fluida.
+- La organización del trabajo y la dinámica grupal.
+- Buena energía y predisposicion entre todos los miembros.
+
+4.	**Hacer menos:**
+- Exigirnos hasta las posibilidades reales de cada miembro del grupo, no sobre exigirnos.
+
+5. **Dejar de hacer:**
+- No llegar al limite con los tiempos de las entregas, rever todo anteriormente.
