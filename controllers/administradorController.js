@@ -1,19 +1,16 @@
-const express= require("express");
+const express = require("express");
 
-const administradorController= {
-    agregarProducto: function () {
-
+const administradorController = {
+    editProduct: function (req, res) {
+        res.render("editProduct");
     },
-    editarProducto: function () {
-
+    createProduct: function (req, res) {
+        res.render("createProduct");
     },
-
     eliminarProducto: function () {
-
+    },
+    productoDestacado: function () {
     },
 
-    productoDestacado: function () {
-
-    }
 }
-module.exports= administradorController;
+module.exports = administradorController;
