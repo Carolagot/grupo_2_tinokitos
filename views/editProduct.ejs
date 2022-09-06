@@ -1,0 +1,48 @@
+<%- include("./partials/head") %>
+    <link rel="stylesheet" href="/css/stylesEditar.css">
+    <title> Editar Productos</title>
+    </head>
+
+    <body>
+        <a href=""><i class="fa-solid fa-circle-user"></i></a>
+        <br>
+        <br>
+        
+        <form action="/crearProducto" method="GET">
+            <p>Editar un producto</p>
+            <label for="nombreProducto">Nombre del producto</label>
+            <br>
+            <input type="text" placeholder="<%= producto.nombre%>" required>
+            <br>
+            <br>
+            <label for="descripcionProducto">Descripción del producto</label>
+            <br>
+            <textarea name="descripcionProducto" placeholder="<%= producto.descripcion%>"id="descripcionProducto" cols="30" rows="10" required></textarea>
+            <br>
+            <br>
+            <label for="fotoProducto">Foto del producto</label>
+            <br>
+            <input type="file" name="fotoProducto" placeholder="<%= producto.foto%>"multiple required>
+            <br>
+            <br>
+            <label for="precioProducto">Precio del producto</label>
+            <br>
+            <input type="number" placeholder="<%= producto.precio%>"  required>
+            <br>
+            <br>
+            <label for="stockProducto">Stock</label>
+            <br>
+            <input type="number" placeholder="<%= producto.stock %>" required>
+            <br>
+            <br>
+            <br>
+            <input class="editarProducto" type="submit" value="EDITAR PRODUCTO">
+            <br>
+            <br>
+            <input class="cancelar" type="reset" value="CANCELAR">
+        </form>
+
+    </body>
+
+
+    </html>

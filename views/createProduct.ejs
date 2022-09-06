@@ -1,0 +1,47 @@
+<%- include("./partials/head") %>
+    <link rel="stylesheet" href="/css/stylesCrear.css">
+    <title> Crear Producto</title>
+    </head>
+
+    <body>
+        <a href=""><i class="fa-solid fa-circle-user"></i></a>
+        <br>
+        <br>
+        
+        <form action="/crearProducto" method="GET">
+            <p>Crear un producto</p>
+            <label for="nombreProducto">Nombre del producto</label>
+            <br>
+            <input type="text" placeholder="Ej: Cochecito bebé" required>
+            <br>
+            <br>
+            <label for="descripcionProducto">Descripción del producto</label>
+            <br>
+            <textarea name="descripcionProducto" id="descripcionProducto" cols="30" rows="10" required></textarea>
+            <br>
+            <br>
+            <label for="fotoProducto">Foto del producto</label>
+            <br>
+            <input type="file" name="fotoProducto" multiple required>
+            <br>
+            <br>
+            <label for="precioProducto">Precio del producto</label>
+            <br>
+            <input type="number" placeholder="00,00"  required>
+            <br>
+            <br>
+            <label for="stockProducto">Stock</label>
+            <br>
+            <input type="number" placeholder="1" required>
+            <br>
+            <br>
+            <br>
+            <input class="crearProducto" type="submit" value="CREAR PRODUCTO">
+            <br>
+            <br>
+            <input class="cancelar" type="reset" value="CANCELAR">
+        </form>
+
+    </body>
+
+    </html>
