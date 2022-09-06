@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,300&family=Roboto:ital,wght@1,300&display=swap');
+
+body {
+    background-color: #686f6a;
+    font-family: 'Fraunces', serif;
+    color:#fff8f6 ;
+    padding: 20px;
+}
+i{
+    font-size: 30px;
+    color: #fff8f6;
+    position:absolute;
+    right: 30px;
+    top: 30px;
+}
+p{
+    font-size: 30px;
+    font-weight: bold;
+}
+form {
+    padding: 40px;
+    border: dotted 3px #fff8f6;
+    text-align: center;
+    margin: auto;
+}
+form label{
+    line-height: 40px;
+}
+input{
+    border-radius: 5px;
+    border: solid 1px black;
+    width: 90%;
+    height: 20px;
+    text-align: center;
+}
+textarea{
+    width: 90%;
+}
+.crearProducto{
+    color:#686f6a ;
+    background-color:#fff8f6 ;
+    width: 70%;
+    height: 30px;
+    font-weight: bold;
+    font-family: "Fraunces";
+    font-size: 15px;
+}
+.cancelar{
+    color:#686f6a ;
+    background-color:#fff8f6 ;
+    width: 40%;
+    height: 20px;
+    font-weight: bold;
+    font-family: "Fraunces";
+    font-size: 12px;
+}
+@media (min-width:480px){
+input{
+    width: 60%;
+}
+textarea{
+    width: 60%;
+}
+.crearProducto{
+    width: 45%;
+    height: 35px;
+    font-size: 18px;
+}
+.cancelar{
+    width: 30%;
+    height: 25px;
+    font-size: 14px;
+}
+}
+@media (min-width:769px){
+    input{
+        width: 45%;
+    }
+    textarea{
+        width: 45%;
+    }
+    .crearProducto{
+        width: 30%;
+        height: 35px;
+        font-size: 20px;
+    }
+    .cancelar{
+        width: 15%;
+        height: 25px;
+        font-size: 16px;
+    }
+    }

@@ -6,7 +6,13 @@ const productosController= {
 },
     productDetail:function (req,res){
         res.render("productDetail");
-}
+},
+    editProduct:function (req,res){
+    res.render("editProduct");
+},
+    createProduct:function (req,res){
+    res.render("createProduct");
+},
     
     }
     module.exports= productosController;
