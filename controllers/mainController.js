@@ -5,7 +5,7 @@ const mainController= {
             res.render('index');
     }, 
 
-    ProductosDetail:function(req, res){
+    productosDetail:function(req, res){
         const id = req.params.id;
         if (id > productos.length - 1){
             res.send('El producto no existe');
@@ -20,7 +20,7 @@ const mainController= {
         Precio: "$7900",
         Descripcion: "Salida de baño 100% algodón con lazo y capucha para los más chiquitos.", 
         Imagen: ("../public/css/imagenes/bata-recortada.jpg"),
-        Categoria: "Hora de Dormir", 
+        Categoria: "Hora de Dormir"
 }, 
         {
         Nombre: "Plato de Silicona",
