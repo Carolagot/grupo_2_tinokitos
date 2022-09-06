@@ -6,6 +6,6 @@ router.get("/editProduct", administradorController.editProduct);
 router.get("/createProduct", administradorController.createProduct);
 router.get("/eliminarProducto", administradorController.eliminarProducto);
 router.get("/productoDestacado", administradorController.productoDestacado);
-
+router.get("/productosDetail:id", administradorController.productosDetail)
 
 module.exports= router;
