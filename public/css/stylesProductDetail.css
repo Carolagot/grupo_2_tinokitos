@@ -190,6 +190,58 @@ footer{
     font-size: 20px;
  }
 }
+.cuadrado-foto {
+    display: block;
+    width: 100%;
+    margin: 15px;
+    border-radius: 10px;
+}
+h2 {
+    font-size: 40px;
+}
+.textos-todos {
+    color: #686f6a;
+    margin: 5px;
+    padding: 5px;
+}
+.precio{
+    font-size: 25px;
+}
+.precio-cuotas {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 2px;
+}
+.fa-credit-card {
+    font-size: 25px;
+    padding: 5px;
+    color: #f5d1c3;
 
-
-
+    
+}
+.cuotas-texto{
+    margin: 3px;
+    
+}
+.cantidad-producto {
+    margin-bottom: 15px;
+}
+.boton-agregar button{
+    width: 85%;
+    color: #686f6a;
+    background-color: #c3d8d1;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: all 450ms;
+}
+@media (min-width:760px) {
+    .textos-todos{
+        display: flex;
+        justify-content: space-around;
+    }
+   .boton-agregar button:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+   }
+}
