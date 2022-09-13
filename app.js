@@ -20,7 +20,8 @@
 	app.listen(3100, () => {
     console.log ("Servidor corriendo en el puerto 3100")
 });
-    app.use (express.urlencoded({exprended:true}));
+
+    app.use (express.urlencoded({extended:true}));
     app.use (express.json());
 
 	app.use("/", routeMain);//sirve para ir mas directo a las rutas y no tener que usar dentro de routes la palabra route.

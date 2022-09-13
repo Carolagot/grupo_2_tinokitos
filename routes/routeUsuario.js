@@ -1,7 +1,6 @@
 const express= require("express");
 const router= express.Router();
 const path = require ("path");
-const multer= require ("multer");
 const usuariosController= require("../controllers/usuariosController");
 
 router.get("/login", usuariosController.login);
