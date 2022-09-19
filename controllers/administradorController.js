@@ -7,8 +7,14 @@ const administradorController = {
     createProduct: function (req, res) {
         res.render("createProduct");
     },
-    eliminarProducto: function () {
+    eliminarProductoDelete: function (req,res) {
+        const { id } = req.params;
+        const productoIndex = producto.findIndex((producto) =>
+        producto.id == id);
+        producto.splice(productoIndex, 1);
+        res.send ('Se elimino un producto');
     },
+
     productoDestacado: function () {
     },
     productosDetail:function(req, res){

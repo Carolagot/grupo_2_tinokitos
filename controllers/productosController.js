@@ -10,7 +10,7 @@ const productosController= {
         res.render("productDetail");
 }, 
 
-createProduct:function (req,res){
+createProduct:function (eq,res){
     res.render("createProduct");
 },
 

@@ -5,6 +5,8 @@
 	const app = express();
     const publicPath = path.resolve(__dirname, './public')
     app.use(express.static (publicPath));
+    
+    const methodOverride = require ("method-override");
 
     const routeAdministrador= require ("./routes/routeAdministrador"); //vinculo las rutas y las requiero para q se ejecuten
     const routeMain= require ("./routes/routeMain");
@@ -23,11 +25,14 @@
 
     app.use (express.urlencoded({extended:true}));
     app.use (express.json());
+    app.use  (methodOverride ("_method"));
 
 	app.use("/", routeMain);//sirve para ir mas directo a las rutas y no tener que usar dentro de routes la palabra route.
     app.use("/usuarios", routeUsuario);
     app.use("/productos", routeProductos);
     app.use ("/administrador", routeAdministrador);
+
+
 
 
 
