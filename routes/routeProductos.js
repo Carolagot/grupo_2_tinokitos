@@ -7,8 +7,6 @@ const productosController= require("../controllers/productosController");
 router.get("/productDetail", productosController.productDetail);
 router.get("/productCart", productosController.productCart);
 
-router.get("/createProduct", productosController.createProduct);
-router.post("/createProduct", productosController.createProductPost)
 
 
 
