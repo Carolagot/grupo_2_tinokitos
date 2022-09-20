@@ -8,31 +8,34 @@
         <br>
         <br>
         
-        <form action="/crearProducto" method="GET">
+        <form action="/administrador/createProduct" method="POST" enctype="multipart/form-data">
             <p>Crear un producto</p>
-            <label for="nombreProducto">Nombre del producto</label>
+            <label for="nombreProducto" >Nombre del producto</label>
             <br>
-            <input type="text" placeholder="Ej: Cochecito bebé" required>
+            <input type="text" name="nombre" placeholder="Ej: Cochecito bebé" required>
+            <br>
+            <label for="categoriaProducto" >Categoria del producto</label>
+            <br>
+            <input type="text" name="categoria" placeholder="Hora de Jugar" required>
+            <br>
+            <label for="descripcion" >Descripción del producto</label>
+            <br>
+            <textarea name="descripcionProducto" name="descripcion"id="descripcion" cols="30" rows="10" required></textarea>
             <br>
             <br>
-            <label for="descripcionProducto">Descripción del producto</label>
-            <br>
-            <textarea name="descripcionProducto" id="descripcionProducto" cols="30" rows="10" required></textarea>
-            <br>
-            <br>
-            <label for="fotoProducto">Foto del producto</label>
+            <label for="fotoProducto" >Foto del producto</label>
             <br>
             <input type="file" name="fotoProducto" multiple required>
             <br>
             <br>
-            <label for="precioProducto">Precio del producto</label>
+            <label for="precioProducto" >Precio del producto</label>
             <br>
-            <input type="number" placeholder="00,00"  required>
+            <input type="number" name="precioProducto" placeholder="00,00"  required>
             <br>
             <br>
             <label for="stockProducto">Stock</label>
             <br>
-            <input type="number" placeholder="1" required>
+            <input type="number" name="stockProducto" placeholder="1" required>
             <br>
             <br>
             <br>

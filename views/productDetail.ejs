@@ -15,14 +15,14 @@
         </div>
         <div class="textos-todos">
         <div class="cuadrado-foto">
-            <img class="coche-premium" src="/imagenes/cochePremium.jpg">
+            <img class="coche-premium" src="<%= product.fotoProducto %>">
         </div>
 
         <div class="textos-productos">
-            <h2>Cochecito Via</h2>
+            <h2> <%= product.nombre %></h2>
 
         
-        <p class="precio">$55.500</p>
+        <p class="precio"><%= product.precio %></p>
         <div class="precio-cuotas">
             <i class="fas fa-credit-card"></i> 
             <p class="cuotas-texto">6 cuotas sin interés de $9.250</p>
@@ -41,22 +41,7 @@
         </div>
         <div>
             <h3> Descripcion</h3>
-            <p>* Convertible en moisés y asiento, el asiento se trasforma en moisés adaptándose a las diferentes etapas del bebé, se usa mirando hacia delante como hacia atrás, y en ambas modalidades, como asiento o como moisés
-                * Ideal de 0 hasta 36 meses de edad.
-                * Posee amortización en el cuadro y en las ruedas.
-                * Respaldo de asiento reclinable, 3 posiciones de reclinado en ambos sentidos.
-                * Incluye cubre pies, mosquitero., posa vaso, acolchado, canasto porta objetos.
-                * Manillar regulable en altura con lazo de seguridad.
-                * Rudas delanteras móviles.
-                * Ruedas traseras todo terreno, de goma maciza con freno centralizado.
-                * Amortiguación en ruedas y estructura.
-                * Las ruedas delanteras y traseras pueden ser retiradas de manera sencilla, gracias a su botón, para que puedas guardar el coche ocupando el menor espacio posible.
-                * El manillar del coche puede regularse en 3 posiciones
-                * La parte trasera del asiento cuenta con un visor de malla, para ver a tu bebé durante el paseo con el asiento orientado hacia delante.
-                * Capota XXL con borde reforzado y visera, para proteger a tu bebé de los rayos solares
-                * Sistema de seguridad arnés de 5 puntos.
-                * Barral frontal extraíble.
-                * Materiales de calidad.</p>
+            <p><%= product.descripcion %></p>
         </div>
         </div>
     </div>

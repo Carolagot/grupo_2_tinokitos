@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "nombre": "Cochecito bebé",
+        "categoria": "Hora de Pasear",
+        "descripcion": "* Convertible en moisés y asiento, el asiento se trasforma en moisés adaptándose a las diferentes etapas del bebé, se usa mirando hacia delante como hacia atrás, y en ambas modalidades, como asiento o como moisés",
+        "fotoProducto": "/imagenes/cochePremium.jpg",
+        "precioProducto": "$55.500",
+        "stockProducto": "10"
+    },
+    {
+        "id": "2",
+        "nombre": "Plato de Silicona",
+        "categoria": "Hora de Comer",
+        "descripcion": "Apto microondas",
+        "fotoProducto": "/imagenes/plato-recortada.jpg",
+        "precioProducto": "$3.200",
+        "stockProducto": "8"
+    }
+]

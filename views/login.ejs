@@ -9,7 +9,7 @@
     <%-include("./partials/header")%>
     <main>
         <section class="contenedorlogin">
-            <form action="/login" method="GET">
+            <form action="/login" method="POST" enctype="multipart/form-data">
                 <div>
                     <div>
                         <h4 class="formato"> MAIL</h4>
@@ -26,10 +26,11 @@
 
             </div class="formato2">
             <h4>¿Olvidaste tu contraseña?</h4>
-            <button class="cuenta"><a href="/login"> CREAR CUENTA</a></button>
+            <button class="cuenta"><a href="/login"> INGRESAR</a></button>
             <div class="iniciar">
-                <h4>¿Ya tenes una cuenta?</h4>
-                <h4 class="subrayado">Iniciar sesión</h4>
+                <h4>¿No tenes una cuenta?</h4>
+                <a href="./register"><h4 class="subrayado">Regitrate</h4></a>
+                
             </div>
         </section>
     </main>
