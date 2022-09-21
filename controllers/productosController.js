@@ -9,12 +9,13 @@ const productosController = {
     productDetail: function (req, res) {
         const id = req.params.id;
         const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
-        const productos= JSON.parse(productsJson);
-        const productoPedido = productos.find(productoActual => productoActual.id === id);
-        if (id > productos.length - 1) {
-            res.send('El producto no existe');
+        const productos = JSON.parse(productsJson);
+        const productoPedido = productos.find(productoActual => productoActual.id == id);
+        console.log(productos);
+        if (productoPedido) {
+            res.render("productDetail", { product: productoPedido })
         } else {
-            res.render("productDetail", { product: productoPedido });
+            res.send('El producto no existe');
         }
     }
 }

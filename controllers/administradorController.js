@@ -17,7 +17,7 @@ const administradorController = {
         const productosJson = fs.readFileSync(path.join(__dirname, '../data/productsBD.json'), 'utf-8');
         const productos = JSON.parse(productosJson);
         const nuevoProducto = {
-            id: productos.lenght +1,
+            id: productos.length +1,
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             fotoProducto: './productsPhotos/' + req.file.filename,
@@ -28,7 +28,7 @@ const administradorController = {
         productos.push(nuevoProducto);
         const productosActualizadosJSON = JSON.stringify(productos);
         fs.writeFileSync(path.join(__dirname, '../data/productsBD.json'), productosActualizadosJSON, 'utf8');
-        res.redirect('/productDetail/' + nuevoProducto.id);
+        res.redirect('/productos/productDetail/' + nuevoProducto.id);
     },
     eliminarProductoDelete: function (req, res) {
         const { id } = req.params;

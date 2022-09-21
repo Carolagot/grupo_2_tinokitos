@@ -5,13 +5,12 @@
         "email": "ngonzalez@gmail.com",
         "telefono": "115039655",
         "categoría": "comprador"
-    }
-
+    },
     {
         "id": "2",
         "nombre": "Mónica Paniagua",
         "email": "P_monica@hotmail.com.ar",
         "telefono": "115039655",
         "categoría": "administrador"
-    }
+    } 
 ]
