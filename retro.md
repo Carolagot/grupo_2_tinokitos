@@ -27,7 +27,7 @@ https://trello.com/b/canCzpZJ/proyecto-integrador-grupo-2
 RETROSPECTIVA SPRINT 2 ENTREGABLE CON SPRINT 3:
 
 UTILIZAMOS MÉTODO ESTRELLA DE MAR:
-**Comenzar a hacer:**
+1.  **Comenzar a hacer:**
 - Utilizar más el tablero Trello.
 - Reuniones del avance una vez por semana mínimo.
 - Compromiso de cada miembro de tener las cosas armadas antes para reverlas y no a último momento.
@@ -47,3 +47,26 @@ UTILIZAMOS MÉTODO ESTRELLA DE MAR:
 
 5. **Dejar de hacer:**
 - No llegar al limite con los tiempos de las entregas, rever todo anteriormente.
+
+RETROSPECTIVA SPRINT 3 ENTREGABLE CON SPRINT 4:
+
+UTILIZAMOS MÉTODO ESTRELLA DE MAR:
+1.  **Comenzar a hacer:**
+- Mejor coordinación para que todas podamos estar presentes en todas las reuniones.
+
+
+2.	**Hacer más:**
+- Que todas estemos entendiendo todos los cambios y todo lo que se sube.
+
+3.	**Continuar haciendo:**
+- Comunicación fluida.
+- Compromiso conjunto con el trabajo, dinamismo y colaboración grupal en todo momento.
+- Logramos poder trabajar en conjunto y generar mas momentos de encuentro en simultaneo para trabajar en equipo.
+
+4.	**Hacer menos:**
+- No encontramos algo en particular.
+
+5. **Dejar de hacer:**
+- No avanzar tanto enel proyecto si alguna de las integrantes no está presente.
+
+
