@@ -33,6 +33,13 @@ input{
     height: 20px;
     text-align: center;
 }
+select{
+    border-radius: 5px;
+    border: solid 1px black;
+    width: 90%;
+    height: 25px;
+    text-align: center;
+}
 textarea{
     width: 90%;
 }
@@ -58,6 +65,9 @@ textarea{
 input{
     width: 60%;
 }
+select{
+    width: 60%;
+}
 textarea{
     width: 60%;
 }
@@ -74,6 +84,9 @@ textarea{
 }
 @media (min-width:769px){
     input{
+        width: 45%;
+    }
+    select{
         width: 45%;
     }
     textarea{
