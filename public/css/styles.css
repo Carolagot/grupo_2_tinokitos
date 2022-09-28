@@ -191,9 +191,6 @@ footer {
     display: block;
 }
 
-article {
-    max-width: 25%;
-}
 
 .contenedor-imagenes-cel {
     display: flex;
@@ -315,6 +312,7 @@ article {
 
 @media (min-width:480px) {
 
+   
     .producto h1 {
         font-size: 30px;
     }
@@ -382,7 +380,9 @@ article {
         display: flex;
         width: 100%;
     }
-
+    article {
+        max-width: 22%;
+    }
     .contenedor-imagenes-cel {
         display: none;
     }

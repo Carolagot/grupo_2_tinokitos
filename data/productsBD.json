@@ -7,34 +7,38 @@
         "descripcion": "* Convertible en moisés y asiento, el asiento se trasforma en moisés adaptándose a las diferentes etapas del bebé, se usa mirando hacia delante como hacia atrás, y en ambas modalidades, como asiento o como moisés",
         "fotoProducto": "/imagenes/cochePremium.jpg",
         "precioProducto": "$55.500",
+        "condicion": "General",
         "stockProducto": "10"
     },
     {
         "id": "2",
-        "nombre": "Plato de Silicona",
-        "categoria": "Hora de Comer",
-        "descripcion": "Apto microondas",
+        "nombre": "Bata con Pantufla",
+        "categoria": "Hora de Dormir",
+        "descripcion": "Talle 4: Largo: 60 cm Manga: 30 cm. Espalda: 35 cm",
         "fotoProducto": "/imagenes/plato-recortada.jpg",
         "precioProducto": "$3.200",
+        "condicion": "General",
         "stockProducto": "8"
     },
     {
         "id": "3",
-        "nombre": "Cochecito bebé",
-        "categoria": "Hora de Pasear",
-        "descripcion": "* Convertible en moisés y asiento, el asiento se trasforma en moisés adaptándose a las diferentes etapas del bebé, se usa mirando hacia delante como hacia atrás, y en ambas modalidades, como asiento o como moisés",
-        "fotoProducto": "/imagenes/cochePremium.jpg",
-        "precioProducto": "$55.500",
+        "nombre": "Nido de Contención",
+        "categoria": "Hora de Dormir",
+        "descripcion": "Cómodo nido de contención para recién nacidos, medidas: 80x40",
+        "fotoProducto": "/imagenes/nidito.jpg",
+        "precioProducto": "$25.000",
+        "condicion": "Destacado",
         "stockProducto": "10"
     },
     {
         "id": "4",
-        "nombre": "Plato de Silicona",
-        "categoria": "Hora de Comer",
-        "descripcion": "Apto microondas",
-        "fotoProducto": "/imagenes/plato-recortada.jpg",
-        "precioProducto": "$3.200",
-        "stockProducto": "8"
+        "nombre": "Huevito Auto",
+        "categoria": "Hora de Pasear",
+        "descripcion": "Sistema Isofix",
+        "fotoProducto": "/imagenes/huevito.jpg",
+        "precioProducto": "$21.600",
+        "condicion": "Destacado",
+        "stockProducto": "9"
     },
     {
         "id": "5",
@@ -43,6 +47,7 @@
         "descripcion": "* Convertible en moisés y asiento, el asiento se trasforma en moisés adaptándose a las diferentes etapas del bebé, se usa mirando hacia delante como hacia atrás, y en ambas modalidades, como asiento o como moisés",
         "fotoProducto": "/imagenes/cochePremium.jpg",
         "precioProducto": "$55.500",
+        "condicion": "General",
         "stockProducto": "10"
     },
     {
@@ -52,6 +57,27 @@
         "descripcion": "Apto microondas",
         "fotoProducto": "/imagenes/plato-recortada.jpg",
         "precioProducto": "$3.200",
+        "condicion": "Destacado",
+        "stockProducto": "8"
+    },
+    {
+        "id": "7",
+        "nombre": "Cochecito bebé",
+        "categoria": "Hora de Pasear",
+        "descripcion": "* Convertible en moisés y asiento, el asiento se trasforma en moisés adaptándose a las diferentes etapas del bebé, se usa mirando hacia delante como hacia atrás, y en ambas modalidades, como asiento o como moisés",
+        "fotoProducto": "/imagenes/cochePremium.jpg",
+        "precioProducto": "$55.500",
+        "condicion": "Destacado",
+        "stockProducto": "10"
+    },
+    {
+        "id": "8",
+        "nombre": "Plato de Silicona",
+        "categoria": "Hora de Comer",
+        "descripcion": "Apto microondas",
+        "fotoProducto": "/imagenes/plato-recortada.jpg",
+        "precioProducto": "$3.200",
+        "condicion": "General",
         "stockProducto": "8"
     }
 ]
