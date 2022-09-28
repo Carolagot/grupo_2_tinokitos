@@ -62,22 +62,22 @@
     },
     {
         "id": "7",
-        "nombre": "Cochecito bebé",
+        "nombre": "Abrigo Osito",
         "categoria": "Hora de Pasear",
-        "descripcion": "* Convertible en moisés y asiento, el asiento se trasforma en moisés adaptándose a las diferentes etapas del bebé, se usa mirando hacia delante como hacia atrás, y en ambas modalidades, como asiento o como moisés",
-        "fotoProducto": "/imagenes/cochePremium.jpg",
-        "precioProducto": "$55.500",
+        "descripcion": "* Forrado con polar soft. Botones snaps para fácil cambiado",
+        "fotoProducto": "/imagenes/RBKM2B7@2x.jpg",
+        "precioProducto": "$6.900",
         "condicion": "Destacado",
-        "stockProducto": "10"
+        "stockProducto": "6"
     },
     {
         "id": "8",
-        "nombre": "Plato de Silicona",
+        "nombre": "Silla de Comer",
         "categoria": "Hora de Comer",
-        "descripcion": "Apto microondas",
-        "fotoProducto": "/imagenes/plato-recortada.jpg",
-        "precioProducto": "$3.200",
+        "descripcion": "Se adapata a distintas alturas. Fácil de lavar!",
+        "fotoProducto": "/imagenes/silla-recortada.jpg",
+        "precioProducto": "$25.000",
         "condicion": "General",
-        "stockProducto": "8"
+        "stockProducto": "3"
     }
 ]

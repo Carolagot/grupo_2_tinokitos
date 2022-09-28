@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,300&family=Roboto:ital,wght@1,300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff8f6;
+    font-family: 'Fraunces', serif;
+}
+
+.presentacion {
+    background-color: #f0bc68;
+    text-align: center;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.navSuperiorMovile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+}
+
+.navSuperiorMovile img {
+    width: 200px;
+    margin: center;
+}
+
+.navSuperiorDesktop {
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 8px;
+}
+
+.navSuperiorDesktop img {
+    width: 300px;
+    margin: center;
+}
+
+.crearIniciarCarrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    color: #686f6a;
+    text-decoration: none;
+}
+
+.crearIniciarCarrito a:link {
+    color: #686f6a;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu i {
+    background-color: #c4d8d1;
+    color: #686f6a;
+    border-radius: 20%;
+    width: 30px;
+    font-size: 30px;
+}
+
+.lupaYCarrito {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lupaYCarrito a:link {
+    color: #686f6a;
+    text-decoration: none;
+}
+
+.navBar {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #c4d8d1;
+    color: #686f6a;
+    font-size: 26pt;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.navBar a {
+    color: #686f6a;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #c4d8d1;
+    width: 100vw;
+}
+
+.contenedorFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerProductos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerNosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerContacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerContactanos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerRedes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.iconosFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    color: #686f6a;
+}
+
+.iconosFooter i {
+    font-size: 25px;
+}
+
+.contenedorFooter p {
+    font-size: 20pt;
+    color: #ffffff;
+    font-style: normal;
+    line-height: 2px;
+}
+
+.footerContactanos div {
+    color: #686f6a;
+    text-align: center;
+}
+
+.contenedorFooter a {
+    color: #686f6a;
+    text-decoration: none;
+}
+
+.logoFooter {
+    display: none;
+}
+
+.banner-desktop {
+    display: none;
+}
+
+.banner-cel {
+    width: 100vw;
+    display: block;
+}
+
+.contenedor-productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+article {
+    width: 100%;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+}
+.article img {
+    width: 90%;
+    padding: 20px 15px;
+    display: flex;
+}
+.titulo {
+    font-size: 15px;
+    color: #686f6a;
+    text-align: center;
+    font-family: "Fraunces semibold";
+}
+.texto {
+    color: #686f6a;
+    text-align: center;
+    margin: center;
+}
+
+
+@media (min-width:480px) {
+    article {
+        width: 50%;
+    }
+    .titulo {
+        font-size: 25px;
+    }
+    
+}
+
+
+@media (min-width:769px) {
+    .navSuperiorDesktop {
+        display: flex;
+
+    }
+
+    .navSuperiorMovile {
+        display: none;
+    }
+
+    .navBar {
+        display: flex;
+        font-size: 20px;
+    }
+
+    .logoFooter {
+        display: flex;
+        width: 10%;
+        align-self: center;
+    }
+
+    .contenedorFooter {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .contenedorFooter p {
+        font-size: 16px;
+    }
+
+    .banner-cel {
+        display: none;
+    }
+
+    .banner-desktop {
+        display: initial;
+        display: flex;
+        width: 100%;
+    }
+    .titulo {
+        font-size: 30px;
+    }
+    article {
+        width: 25%;
+    }
+
+}
+
+@media (min-width:1200px) {
+    .navBar {
+        font-size: 26px;
+    }
+
+    .contenedorFooter p {
+        font-size: 20px;
+    }
+
+}
