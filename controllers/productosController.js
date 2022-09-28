@@ -7,7 +7,10 @@ const productosController = {
         res.render("productCart");
     },
     productList: function (req, res) {
-        res.render("productList");
+        const productosJson = fs.readFileSync(path.join(__dirname, '../data/productsBD.json'), 'utf-8');
+        const productos = JSON.parse(productosJson);
+        
+        res.render("productList", {productos});
     },
     productDetail: function (req, res) {
         const id = req.params.id;
