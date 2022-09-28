@@ -6,6 +6,9 @@ const productosController = {
     productCart: function (req, res) {
         res.render("productCart");
     },
+    productList: function (req, res) {
+        res.render("productList");
+    },
     productDetail: function (req, res) {
         const id = req.params.id;
         const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
