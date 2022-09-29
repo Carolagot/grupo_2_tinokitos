@@ -15,10 +15,10 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-router.get("/editProduct", administradorController.editProduct);
+router.get("/editProduct/:id", administradorController.editProduct);
 router.put("/editProduct", administradorController.editProductPut);
 router.get("/createProduct", administradorController.createProduct);
 router.post("/createProduct", upload.single("fotoProducto"), administradorController.createProductPost);
-router.delete("/eliminarProducto/:id", administradorController.eliminarProductoDelete);
+router.delete("/eliminarProductoDelete", administradorController.eliminarProductoDelete);
 
 module.exports = router;

@@ -4,7 +4,16 @@ const path = require("path");
 
 const administradorController = {
     editProduct: function (req, res) {
-        res.render("editProduct");
+        const id = req.params.id;
+        const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
+        const productos = JSON.parse(productsJson);
+        const productoPedido = productos.find(productoActual => productoActual.id == id);
+        console.log(productos);
+        if (productoPedido) {
+            res.render("editProduct", { product: productoPedido })
+        } else {
+            res.send('El producto no existe');
+        }
     },
     editProductPut: function (req, res) {
         res.render("editProduct");
@@ -20,7 +29,7 @@ const administradorController = {
             id: productos.length +1,
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
-            fotoProducto: '../imagenes/fotosProductos/' + req.file.filename,
+            fotoProducto: '/imagenes/fotosProductos/' + req.file.filename,
             precio: req.body.precioProducto,
             categoria: req.body.categoria,
             condicion: req.body.condicion,
@@ -32,12 +41,15 @@ const administradorController = {
         res.redirect('/productos/productDetail/' + nuevoProducto.id);
     },
     eliminarProductoDelete: function (req, res) {
-        const { id } = req.params;
-        const productoIndex = producto.findIndex((producto) =>
-            producto.id == id);
-        producto.splice(productoIndex, 1);
+        const id = req.params.id;
+        const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
+        const productos = JSON.parse(productsJson);
+        productosActualizado= productos.filter(productoActual => productoActual.id != id);
+        console.log(productosActualizado);
+        const productosActualizadosJSON = JSON.stringify(productosActualizado);
+        fs.writeFileSync(path.join(__dirname, '../data/productsBD.json'), productosActualizadosJSON, 'utf8');
         res.send('Se elimino un producto');
-    },
+    }
 }
 
 module.exports = administradorController;
