@@ -20,9 +20,10 @@ const administradorController = {
             id: productos.length +1,
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
-            fotoProducto: './productsPhotos/' + req.file.filename,
+            fotoProducto: '../imagenes/fotosProductos/' + req.file.filename,
             precio: req.body.precioProducto,
             categoria: req.body.categoria,
+            condicion: req.body.condicion,
             stockProducto: req.body.stockProducto
         };
         productos.push(nuevoProducto);
