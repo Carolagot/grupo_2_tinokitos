@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,300&family=Roboto:ital,wght@1,300&display=swap');
+
+body {
+    font-family: fraunces;
+    background-color: #c4d8d1;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+}
+
+.error img {
+    width: 95%;
+    margin: auto;
+}
+
+p {
+    font-size: 20px;
+    color: #686f6a;
+}
+
+h2 {
+    font-size: 35px;
+    color: #686f6a;
+
+}
+
+button {
+    font-size: 25px;
+    font-weight: bolder;
+    color: #686f6a;
+    background-color: #f5d1c3;
+    border-radius: 10px;
+    border-color: #686f6a;
+    margin: center;
+}
+
+@media (min-width:769px) {
+    .error img {
+        width: 70%;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 5px;
+    }
+
+    h2 {
+        font-size: 30px;
+        line-height: 5px;
+    }
+
+    button {
+        font-size: 25px;
+    }
+}
+
+@media (min-width:1200px) {
+    .error img {
+        width: 50%;
+    }
+}
