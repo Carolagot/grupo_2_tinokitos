@@ -24,13 +24,13 @@ const productosController = {
         }
     },
     productHoraDeComer: function (req, res) {
-        const id = req.params.id;
+        const categoria = req.params.categoria;
         const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
         const productos = JSON.parse(productsJson);
-        const categoriaPedido = productos.filter(categoriaActual => categoriaActual.categoria == "Hora de Comer");
+        const categoriaPedida = productos.filter(productoActual => productoActual.categoria == "Hora de Comer");
         console.log(productos);
-        if (categoriaPedido) {
-            res.render("horaDeComer", { product: categoriaPedido })
+        if (categoriaPedida) {
+            res.render("horaDeComer", { product: categoriaPedida })
         } else {
             res.send('La categoria no existe');
         }
