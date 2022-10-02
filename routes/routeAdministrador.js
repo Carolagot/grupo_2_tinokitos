@@ -21,4 +21,5 @@ router.get("/createProduct", administradorController.createProduct);
 router.post("/createProduct", upload.single("fotoProducto"), administradorController.createProductPost);
 router.delete("/eliminarProductoDelete", administradorController.eliminarProductoDelete);
 
+
 module.exports = router;

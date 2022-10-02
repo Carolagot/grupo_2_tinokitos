@@ -42,6 +42,7 @@ const administradorController = {
     },
     eliminarProductoDelete: function (req, res) {
         const id = req.params.id;
+        //console.log("eliminarProductoDelete");
         const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
         const productos = JSON.parse(productsJson);
         productosActualizado= productos.filter(productoActual => productoActual.id != id);
@@ -50,6 +51,7 @@ const administradorController = {
         fs.writeFileSync(path.join(__dirname, '../data/productsBD.json'), productosActualizadosJSON, 'utf8');
         res.send('Se elimino un producto');
     }
+    
 }
 
 module.exports = administradorController;

@@ -1,0 +1,48 @@
+<%- include("./partials/head") %>
+    <link rel="stylesheet" href="/css/stylesList.css">
+    <title>Tinokitos Lista de Productos</title>
+    </head>
+
+    <body>
+
+        <%- include("./partials/header") %>
+
+            <main>
+
+                <img class="banner-desktop" src="/imagenes/banner.jpg" alt="">
+
+                <img class="banner-cel" src="/imagenes/banner-cel.jpg" alt="">
+                <br>
+                <section>
+
+                    <div class="titulo">
+                        <h1>Productos</h1>
+                    </div>
+                    <div class="contenedor-productos">
+                        <% productos.forEach (categoria=> { %>
+                            <article>
+                                <a href="/productos/horaDeDormir/<%= producto.id %>">
+                                    <img src="<%= producto.fotoProducto %>" alt="<%= producto.nombre %>">
+                                    <div class="texto">
+                                        <h2>
+                                            <%= producto.nombre %>
+                                        </h2>
+                                        <h3>
+                                            <%= producto.precioProducto %>
+                                        </h3>
+                                    </div>
+                                </a>
+                            </article>
+                            <% }) %>
+
+                    </div>
+
+            </main>
+
+            <%-include(". /partials/footer")%>
+
+    </body>
+
+
+
+    </html>

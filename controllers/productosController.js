@@ -22,7 +22,20 @@ const productosController = {
         } else {
             res.send('El producto no existe');
         }
-    }
+    },
+    productHoraDeComer: function (req, res) {
+        const id = req.params.id;
+        const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
+        const productos = JSON.parse(productsJson);
+        const categoriaPedido = productos.filter(categoriaActual => categoriaActual.categoria == "Hora de Comer");
+        console.log(productos);
+        if (categoriaPedido) {
+            res.render("horaDeComer", { product: categoriaPedido })
+        } else {
+            res.send('La categoria no existe');
+        }
+    },
+    
 }
 
 module.exports = productosController;
