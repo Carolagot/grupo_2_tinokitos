@@ -46,8 +46,7 @@ const administradorController = {
         const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
         const productos = JSON.parse(productsJson);
         productosActualizado= productos.filter(productoActual => productoActual.id != id);
-        console.log(productosActualizado);
-        const productosActualizadosJSON = JSON.stringify(productosActualizado);
+        const productosActualizadosJSON = JSON.stringify(productosActualizado, null, " ");
         fs.writeFileSync(path.join(__dirname, '../data/productsBD.json'), productosActualizadosJSON, 'utf8');
         res.send('Se elimino un producto');
     }
