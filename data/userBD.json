@@ -4,13 +4,19 @@
         "nombre": "Nicolás Gonzalez",
         "email": "ngonzalez@gmail.com",
         "telefono": "115039655",
-        "categoría": "comprador"
+        "contraseña": "1234",
+        "confirmarContraseña": "1234",
+        "notificaciones": "true",
+        "compradorAdministrador": "comprador"
     },
     {
         "id": "2",
         "nombre": "Mónica Paniagua",
         "email": "P_monica@hotmail.com.ar",
         "telefono": "115039655",
-        "categoría": "administrador"
+        "contraseña": "abc",
+        "confirmarContraseña": "abc",
+        "notificaciones": "false",
+        "compradorAdministrador": "administrador"
     } 
 ]

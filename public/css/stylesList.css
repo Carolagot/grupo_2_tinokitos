@@ -213,6 +213,10 @@ article {
     text-align: center;
     font-family: "Fraunces semibold";
 }
+a:link {
+    color: #686f6a;
+    text-decoration: none;
+}
 .texto {
     color: #686f6a;
     text-align: center;

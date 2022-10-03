@@ -16,7 +16,6 @@ const productosController = {
         const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
         const productos = JSON.parse(productsJson);
         const productoPedido = productos.find(productoActual => productoActual.id == id);
-        console.log(productos);
         if (productoPedido) {
             res.render("productDetail", { product: productoPedido })
         } else {
@@ -24,18 +23,30 @@ const productosController = {
         }
     },
     productHoraDeComer: function (req, res) {
-        const id = req.params.id;
         const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
         const productos = JSON.parse(productsJson);
-        const categoriaPedido = productos.filter(categoriaActual => categoriaActual.categoria == "Hora de Comer");
-        console.log(productos);
-        if (categoriaPedido) {
-            res.render("horaDeComer", { product: categoriaPedido })
-        } else {
-            res.send('La categoria no existe');
-        }
+        const productosComer = productos.filter(productoActual => productoActual.categoria === "Hora de Comer");
+        res.render("horaDeComer", {productosComer})
     },
-    
+    productHoraDeJugar: function (req, res) {
+        const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
+        const productos = JSON.parse(productsJson);
+        const productosJugar = productos.filter(productoActual => productoActual.categoria === "Hora de Jugar");
+        res.render("horaDeJugar", {productosJugar})
+    },
+    productHoraDeDormir: function (req, res) {
+        const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
+        const productos = JSON.parse(productsJson);
+        const productosDormir = productos.filter(productoActual => productoActual.categoria === "Hora de Dormir");
+        res.render("horaDeDormir", {productosDormir})
+    },
+    productHoraDePasear: function (req, res) {
+        const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
+        const productos = JSON.parse(productsJson);
+        const productosPasear = productos.filter(productoActual => productoActual.categoria === "Hora de Pasear");
+        res.render("horaDePasear", {productosPasear})
+    },
+
 }
 
 module.exports = productosController;

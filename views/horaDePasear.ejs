@@ -1,6 +1,6 @@
 <%- include("./partials/head") %>
     <link rel="stylesheet" href="/css/stylesList.css">
-    <title>Tinokitos Lista de Productos</title>
+    <title>Tinokitos Hora de Pasear</title>
     </head>
 
     <body>
@@ -16,22 +16,23 @@
                 <section>
 
                     <div class="titulo">
-                        <h1>Productos</h1>
+                        <h1>Hora de Pasear</h1>
                     </div>
                     <div class="contenedor-productos">
-                        <% productos.forEach (categoria=> { %>
+                        <% productosPasear.forEach (producto=> { %>
                             <article>
-                                <a href="/productos/horaDePasear/<%= producto.id %>">
                                     <img src="<%= producto.fotoProducto %>" alt="<%= producto.nombre %>">
                                     <div class="texto">
-                                        <h2>
+                                        <a href="/productos/horaDeComer/<%= producto.id %>">
+                                            <h2>
                                             <%= producto.nombre %>
                                         </h2>
                                         <h3>
                                             <%= producto.precioProducto %>
                                         </h3>
+                                    </a>
                                     </div>
-                                </a>
+                                
                             </article>
                             <% }) %>
 
@@ -39,10 +40,8 @@
 
             </main>
 
-            <%-include(". /partials/footer")%>
+            <%-include("./partials/footer")%>
 
     </body>
-
-
 
     </html>
