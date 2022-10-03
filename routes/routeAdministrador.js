@@ -19,7 +19,7 @@ router.get("/editProduct/:id", administradorController.editProduct);
 router.put("/editProduct", administradorController.editProductPut);
 router.get("/createProduct", administradorController.createProduct);
 router.post("/createProduct", upload.single("fotoProducto"), administradorController.createProductPost);
-router.delete("/eliminarProductoDelete", administradorController.eliminarProductoDelete);
+router.post("/eliminarProductoDelete/:id", administradorController.eliminarProductoDelete);
 
 
 module.exports = router;
