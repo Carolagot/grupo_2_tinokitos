@@ -23,23 +23,10 @@ const productosController = {
         }
     },
     productHoraDeComer: function (req, res) {
-<<<<<<< HEAD
         const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
         const productos = JSON.parse(productsJson);
         const productosComer = productos.filter(productoActual => productoActual.categoria === "Hora de Comer");
         res.render("horaDeComer", {productosComer})
-=======
-        const categoria = req.params.categoria;
-        const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
-        const productos = JSON.parse(productsJson);
-        const categoriaPedida = productos.filter(productoActual => productoActual.categoria == "Hora de Comer");
-        console.log(productos);
-        if (categoriaPedida) {
-            res.render("horaDeComer", { product: categoriaPedida })
-        } else {
-            res.send('La categoria no existe');
-        }
->>>>>>> 01d67b0276f8571780eea44db6096b367bd221a7
     },
     productHoraDeJugar: function (req, res) {
         const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
