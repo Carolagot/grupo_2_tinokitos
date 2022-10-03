@@ -7,6 +7,9 @@ const mainController = {
  filosofia: function (req, res) {
     res.render('filosofia');
 },    
+contactanos: function (req, res) {
+    res.render('contactanos');
+} 
 };
 
 module.exports = mainController;

@@ -30,6 +30,16 @@
   "stockProducto": "3"
  },
  {
+    "id": "4",
+    "nombre": "Abrigo Osito",
+    "categoria": "Hora de Pasear",
+    "descripcion": "Forrado en Polar soft, súper suave!",
+    "fotoProducto": "/imagenes/fotosProductos/RBKM2B7@2x.jpg",
+    "precioProducto": "$6.400",
+    "condicion": "General",
+    "stockProducto": "3"
+   },
+ {
   "id": "5",
   "nombre": "Coche Moisés",
   "categoria": "Hora de Pasear",
