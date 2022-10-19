@@ -7,6 +7,7 @@
         "contraseña": "1234",
         "confirmarContraseña": "1234",
         "notificaciones": "true",
+        "fotosUsuarios": "/imagenes/fotosUsuarios/defaultFotoUsuario.jpg",
         "compradorAdministrador": "comprador"
     },
     {
@@ -18,5 +19,20 @@
         "confirmarContraseña": "abc",
         "notificaciones": "false",
         "compradorAdministrador": "administrador"
-    } 
+    },
+    {
+        "id": 1666187385963,
+        "nombre": "Meli Spiler",
+        "telefono": "115471485",
+        "email": "melispiler@hotmail.com",
+        "contraseña": "Meli123"
+    },
+    {
+        "id": 1666192157826,
+        "nombre": "mica",
+        "telefono": "115471548",
+        "email": "micatawil@hotmail.com",
+        "password": "$2a$10$Y5N23z/8wmZsfaIfFDX3p..xqouhkNFWc15jvztcan0WEvVg3daSG",
+        "fotosUsuarios": "/imagenes/fotosUsuarios/1666192157317-images (2).jpg"
+    }
 ]

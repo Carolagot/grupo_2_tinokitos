@@ -14,7 +14,8 @@
             <img src=".\imagenes\registro.jpg">
         </section>
         <section class="contenedor2">
-            <form action="/usuarios/register" method="POST">
+            <form action="/usuarios/register" method="POST" enctype="multipart/form-data"
+            >
                 <div>
                     <h4 class="formato"> NOMBRE Y APELLIDO</h4>
                     <input class="registro1" type="text" name="nombre" placeholder="Nombre y Apellido">
@@ -23,9 +24,11 @@
                     <h4 class="formato">TELÉFONO</h4>
                     <input class=registro1 type="number" name="telefono" placeholder="Telefono">
                     <h4 class="formato">CONTRASEÑA</h3>
-                        <input class="registro1" type="password" name="contraseña">
+                        <input class="registro1" type="password" name="password">
                         <h4 class="formato">CONFIRMAR CONTRASEÑA</h3>
-                            <input class="registro1" type="password" name="confirmarContraseña">
+                            <input class="registro1" type="password" name="confirmarPassword">
+                            <h4 class="formato">FOTO DE PERFIL</h3>
+                                <input class="registro1" type="file" name="fotosUsuarios">        
                 </div>
                 <div>
                     <label class="formato2"><input type="radio" name="notificaciones"><strong> Quiero recibir
