@@ -30,6 +30,8 @@ const usuariosController = {
         fs.writeFileSync(path.join(__dirname, '../data/userBD.json'), usuariosActualizadosJSON, 'utf8');
         res.redirect("/index");
     },
+
+    
 }
 
 module.exports = usuariosController;
