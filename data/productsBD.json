@@ -1,1 +1,112 @@
-[{"id":"1","nombre":"Plato de Silicona","categoria":"Hora de Comer","descripcion":"Apto microondas","fotoProducto":"/imagenes/fotosProductos/plato-recortada.jpg","precioProducto":"$3.200","condicion":"Destacado","stockProducto":"8"},{"id":"2","nombre":"Bata con Pantufla","categoria":"Hora de Dormir","descripcion":"Talle 4: Largo: 60 cm Manga: 30 cm. Espalda: 35 cm","fotoProducto":"/imagenes/fotosProductos/bata-recortada.jpg","precioProducto":"$7.900","condicion":"General","stockProducto":"8"},{"id":"3","nombre":"Silla de Comer","categoria":"Hora de Comer","descripcion":"Se adapata a distintas alturas. Fácil de lavar!","fotoProducto":"/imagenes/fotosProductos/silla-recortada.jpg","precioProducto":"$25.000","condicion":"General","stockProducto":"3"},{"id":"4","nombre":"Abrigo Osito","categoria":"Hora de Pasear","descripcion":"Forrado en Polar soft, súper suave!","fotoProducto":"/imagenes/fotosProductos/RBKM2B7@2x.jpg","precioProducto":"$6.400","condicion":"General","stockProducto":"3"},{"id":"5","nombre":"Coche Moisés","categoria":"Hora de Pasear","descripcion":"Convertible en moisés y asiento, el asiento se trasforma en moisés adaptándose a las diferentes etapas del bebé, se usa mirando hacia delante como hacia atrás, y en ambas modalidades, como asiento o como moisés","fotoProducto":"/imagenes/fotosProductos/cochePremium.jpg","precioProducto":"$55.500","condicion":"General","stockProducto":"10"},{"id":"6","nombre":"Babero de Silicona","categoria":"Hora de Comer","descripcion":"Nuestro babero de silicona se limpia fácil y rápidamente. ¡Incluso puedes meterlo en el lava vajillas! Tiene un bolsillo profundo para atrapar migas, está hecho de silicona segura y su correa es ajustable ","fotoProducto":"/imagenes/fotosProductos/baberos-recortada.jpg","precioProducto":"$2.200","condicion":"General","stockProducto":"10"},{"id":"7","nombre":"Nido de Contención","categoria":"Hora de Dormir","descripcion":"Cómodo nido de contención para recién nacidos, medidas: 80x40","fotoProducto":"/imagenes/fotosProductos/nidito.jpg","precioProducto":"$9.900","condicion":"Destacado","stockProducto":"10"},{"id":"8","nombre":"Huevito Auto","categoria":"Hora de Pasear","descripcion":"Sistema Isofix","fotoProducto":"/imagenes/fotosProductos/huevito.jpg","precioProducto":"$21.600","condicion":"Destacado","stockProducto":"9"},{"id":"9","nombre":"Huevito Auto","categoria":"Hora de Jugar","descripcion":"Artesanal! Con figuras tejidas","fotoProducto":"/imagenes/fotosProductos/hora-jugar-recortada.jpg","precioProducto":"$18.600","condicion":"General","stockProducto":"3"},{"id":"10","nombre":"Guitarra de madera","categoria":"Hora de Jugar","descripcion":"Apta para los más chiquitos!","fotoProducto":"/imagenes/fotosProductos/guitarras-de-madera-palstico-5-tamanos-790x790.png","precioProducto":"$6.700","condicion":"General","stockProducto":"6"},{"id":11,"nombre":"andador","descripcion":"dibje","fotoProducto":"/imagenes/fotosProductos/1666190553994-andadorazullove.jpg","precio":"8900","categoria":"hora de paseo","condicion":"General","stockProducto":"2"}]
+[
+    {
+        "id": "1",
+        "nombre": "Plato de Silicona",
+        "categoria": "Hora de Comer",
+        "descripcion": "Apto microondas",
+        "fotoProducto": "/imagenes/fotosProductos/plato-recortada.jpg",
+        "precioProducto": "$3.200",
+        "condicion": "Destacado",
+        "stockProducto": "8"
+    },
+    {
+        "id": "2",
+        "nombre": "Bata con Pantufla",
+        "categoria": "Hora de Dormir",
+        "descripcion": "Talle 4: Largo: 60 cm Manga: 30 cm. Espalda: 35 cm",
+        "fotoProducto": "/imagenes/fotosProductos/bata-recortada.jpg",
+        "precioProducto": "$7.900",
+        "condicion": "General",
+        "stockProducto": "8"
+    },
+    {
+        "id": "3",
+        "nombre": "Silla de Comer",
+        "categoria": "Hora de Comer",
+        "descripcion": "Se adapata a distintas alturas. Fácil de lavar!",
+        "fotoProducto": "/imagenes/fotosProductos/silla-recortada.jpg",
+        "precioProducto": "$25.000",
+        "condicion": "General",
+        "stockProducto": "3"
+    },
+    {
+        "id": "4",
+        "nombre": "Abrigo Osito",
+        "categoria": "Hora de Pasear",
+        "descripcion": "Forrado en Polar soft, súper suave!",
+        "fotoProducto": "/imagenes/fotosProductos/RBKM2B7@2x.jpg",
+        "precioProducto": "$6.400",
+        "condicion": "General",
+        "stockProducto": "3"
+    },
+    {
+        "id": "5",
+        "nombre": "Coche Moisés",
+        "categoria": "Hora de Pasear",
+        "descripcion": "Convertible en moisés y asiento, el asiento se trasforma en moisés adaptándose a las diferentes etapas del bebé, se usa mirando hacia delante como hacia atrás, y en ambas modalidades, como asiento o como moisés",
+        "fotoProducto": "/imagenes/fotosProductos/cochePremium.jpg",
+        "precioProducto": "$55.500",
+        "condicion": "General",
+        "stockProducto": "10"
+    },
+    {
+        "id": "6",
+        "nombre": "Babero de Silicona",
+        "categoria": "Hora de Comer",
+        "descripcion": "Nuestro babero de silicona se limpia fácil y rápidamente. ¡Incluso puedes meterlo en el lava vajillas! Tiene un bolsillo profundo para atrapar migas, está hecho de silicona segura y su correa es ajustable ",
+        "fotoProducto": "/imagenes/fotosProductos/baberos-recortada.jpg",
+        "precioProducto": "$2.200",
+        "condicion": "General",
+        "stockProducto": "10"
+    },
+    {
+        "id": "7",
+        "nombre": "Nido de Contención",
+        "categoria": "Hora de Dormir",
+        "descripcion": "Cómodo nido de contención para recién nacidos, medidas: 80x40",
+        "fotoProducto": "/imagenes/fotosProductos/nidito.jpg",
+        "precioProducto": "$9.900",
+        "condicion": "Destacado",
+        "stockProducto": "10"
+    },
+    {
+        "id": "8",
+        "nombre": "Huevito Auto",
+        "categoria": "Hora de Pasear",
+        "descripcion": "Sistema Isofix",
+        "fotoProducto": "/imagenes/fotosProductos/huevito.jpg",
+        "precioProducto": "$21.600",
+        "condicion": "Destacado",
+        "stockProducto": "9"
+    },
+    {
+        "id": "9",
+        "nombre": "Huevito Auto",
+        "categoria": "Hora de Jugar",
+        "descripcion": "Artesanal! Con figuras tejidas",
+        "fotoProducto": "/imagenes/fotosProductos/hora-jugar-recortada.jpg",
+        "precioProducto": "$18.600",
+        "condicion": "General",
+        "stockProducto": "3"
+    },
+    {
+        "id": "10",
+        "nombre": "Guitarra de madera",
+        "categoria": "Hora de Jugar",
+        "descripcion": "Apta para los más chiquitos!",
+        "fotoProducto": "/imagenes/fotosProductos/guitarras-de-madera-palstico-5-tamanos-790x790.png",
+        "precioProducto": "$6.700",
+        "condicion": "General",
+        "stockProducto": "6"
+    },
+    {
+        "id": 11,
+        "nombre": "andador",
+        "descripcion": "dibje",
+        "fotoProducto": "/imagenes/fotosProductos/1666190553994-andadorazullove.jpg",
+        "precio": "8900",
+        "categoria": "hora de paseo",
+        "condicion": "General",
+        "stockProducto": "2"
+    }
+]

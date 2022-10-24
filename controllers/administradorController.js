@@ -3,12 +3,14 @@ const fs = require("fs");
 const path = require("path");
 
 const administradorController = {
+    vistaAdministrador:function (req, res) {
+        res.render("productListAdministrador");
+    },
     editProduct: function (req, res) {
         const id = req.params.id;
         const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
         const productos = JSON.parse(productsJson);
         const productoPedido = productos.find(productoActual => productoActual.id == id);
-        console.log(productos);
         if (productoPedido) {
             res.render("editProduct", { product: productoPedido })
         } else {
@@ -16,7 +18,7 @@ const administradorController = {
         }
     },
     editProductPut: function (req, res) {
-        res.render("editProduct");
+        res.render("productListAdministrador");
     },
     createProduct: function (req, res) {
         res.render("createProduct");
@@ -49,7 +51,12 @@ const administradorController = {
         const productosActualizadosJSON = JSON.stringify(productosActualizado, null, " ");
         fs.writeFileSync(path.join(__dirname, '../data/productsBD.json'), productosActualizadosJSON, 'utf8');
         res.send('Se elimino un producto');
-    }
+    },
+    productListAdministrador: function (req, res) {
+        const productosJson = fs.readFileSync(path.join(__dirname, '../data/productsBD.json'), 'utf-8');
+        const productos = JSON.parse(productosJson);
+        res.render("productListAdministrador", {productos});
+    },
     
 }
 

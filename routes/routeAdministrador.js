@@ -15,11 +15,13 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
+router.get("/", administradorController.vistaAdministrador);
 router.get("/editProduct/:id", administradorController.editProduct);
-router.put("/editProduct", administradorController.editProductPut);
+router.post("/editProduct", administradorController.editProductPut);
 router.get("/createProduct", administradorController.createProduct);
 router.post("/createProduct", upload.single("fotoProducto"), administradorController.createProductPost);
 router.post("/eliminarProductoDelete/:id", administradorController.eliminarProductoDelete);
+router.get("/productListAdministrador",administradorController.productListAdministrador);
 
 
 module.exports = router;

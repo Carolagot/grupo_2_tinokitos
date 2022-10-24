@@ -8,7 +8,7 @@
         <br>
         <br>
         
-        <form action="/administrador/editProduct" method="POST" enctype="multipart/form-data">
+        <form action="/administrador/productListAdministrador" method="POST" enctype="multipart/form-data">
             <p>Editar un producto</p>
             <label for="nombreProducto">Nombre del producto</label>
             <br>
@@ -22,10 +22,8 @@
             <br>
             <label for="fotoProducto">Foto del producto</label>
             <br>
-            <input type="file" name="fotoProducto"multiple required>
+            <input type="file" name="fotoProducto" value="<%= product.fotoProducto %>" required>
             <br>
-            <br>
-            <img src="<%= product.fotoProducto %>" alt="">
             <br>
             <br>
             <label for="precioProducto">Precio del producto</label>
@@ -46,7 +44,7 @@
             </select>
             <br>
            <br>
-            <input class="editarProducto" type="submit" value="EDITAR PRODUCTO">
+           <input class="editarProducto" type="submit" value="EDITAR PRODUCTO" >
             <br>
             <br>
             <input class="cancelar" type="reset" value="CANCELAR">

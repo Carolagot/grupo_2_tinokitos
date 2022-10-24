@@ -18,11 +18,13 @@ const usuariosController = {
         const nuevoUsuario = {
             id: Date.now(),
             nombre: req.body.nombre,
-            telefono: req.body.telefono,
             email: req.body.email,
+            telefono: req.body.telefono,
             password: constraseñaHasheada, 
             categoria: req.body.categoria,
-            fotosUsuarios: '/imagenes/fotosUsuarios/' + req.file.filename
+            fotosUsuarios: '/imagenes/fotosUsuarios/' + req.file.filename,
+            notificaciones:req.body.notificaciones,
+            tipo:"comprador"
         };
         usuarios.push(nuevoUsuario);
         const usuariosActualizadosJSON = JSON.stringify(usuarios);
