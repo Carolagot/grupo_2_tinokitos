@@ -4,7 +4,6 @@ const path = require("path");
 const bcryptjs = require ("bcryptjs");
 
 const usuariosController = {
-
     login: function (req, res) {
         res.render("login");
     },
@@ -28,10 +27,23 @@ const usuariosController = {
         usuarios.push(nuevoUsuario);
         const usuariosActualizadosJSON = JSON.stringify(usuarios);
         fs.writeFileSync(path.join(__dirname, '../data/userBD.json'), usuariosActualizadosJSON, 'utf8');
-        res.redirect("/index");
+        res.redirect("/");
     },
+    loginProcess: (req, res) => {
+        const userData = req.body;
+        const usersJSON = fs.readFileSync(path.join(__dirname, "../data/usersDB.json"), "utf-8");
+        const usuarios = JSON.parse(usersJSON);
 
-    
+        const usuarioLogueado = usuarios.find(thisUser => thisUser.mail === userData.mail);
+        if (usuarioLogueado) {
+            let contraseñaCorrecta = bcryptjs.compareSync(userData.password, usuarioLogueado.password);
+            if (contraseñaCorrecta) {
+                res.redirect("/usuarios/login");
+            } else {
+                res.redirect("/usuarios/register")
+            }
+        }
 }
+  }
 
 module.exports = usuariosController;
