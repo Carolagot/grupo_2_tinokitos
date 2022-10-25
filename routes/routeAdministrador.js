@@ -15,6 +15,7 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
+
 router.get("/", administradorController.vistaAdministrador);
 router.get("/editProduct/:id", administradorController.editProduct);
 router.post("/editProduct", administradorController.editProductPut);

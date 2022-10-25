@@ -18,7 +18,7 @@
         "password": "abc",
         "notificaciones": "true",
         "fotosUsuarios": "/imagenes/fotosUsuarios/defaultFotoUsuario.jpg",
-        "tipo": "usuario"
+        "tipo": "comprador"
     },
     {
         "id":"3",
@@ -28,6 +28,6 @@
         "password": "Meli123",
         "notificaciones": "true",
         "fotosUsuarios": "/imagenes/fotosUsuarios/defaultFotoUsuario.jpg",
-        "tipo": "usuario"
+        "tipo": "comprador"
     }
 ]

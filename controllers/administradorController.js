@@ -3,6 +3,11 @@ const fs = require("fs");
 const path = require("path");
 
 const administradorController = {
+    headerAdministrador:function (req, res) {
+        const usuariosJson = fs.readFileSync(path.join(__dirname, '../data/userBD.json'), 'utf-8');
+        const usuarios = JSON.parse(usuariosJson);
+        res.render("header", { usuario: usuarioPedido });
+    },
     vistaAdministrador:function (req, res) {
         res.render("productListAdministrador");
     },
@@ -18,7 +23,24 @@ const administradorController = {
         }
     },
     editProductPut: function (req, res) {
-        res.render("productListAdministrador");
+        console.log(req.file)
+        const id = req.params.id;
+        const productosJson = fs.readFileSync(path.join(__dirname, '../data/productsBD.json'), 'utf-8');
+        const productos = JSON.parse(productosJson);
+        const nuevoProducto = {
+            id: id,
+            nombre: req.body.nombre,
+            descripcion: req.body.descripcion,
+            fotoProducto: '/imagenes/fotosProductos/' + req.file.filename,
+            precio: req.body.precioProducto,
+            categoria: req.body.categoria,
+            condicion: req.body.condicion,
+            stockProducto: req.body.stockProducto
+        };
+        productos.push(nuevoProducto);
+        const productosActualizadosJSON = JSON.stringify(productos);
+        fs.writeFileSync(path.join(__dirname, '../data/productsBD.json'), productosActualizadosJSON, 'utf8');
+        res.redirect('/productos/productDetail/' + nuevoProducto.id);
     },
     createProduct: function (req, res) {
         res.render("createProduct");
