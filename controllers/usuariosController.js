@@ -40,7 +40,7 @@ const usuariosController = {
         if (usuarioLogueado) {
             let contraseñaCorrecta = bcryptjs.compareSync(userData.password, usuarioLogueado.password);
             if (contraseñaCorrecta) {
-                res.redirect("/usuarios/login");
+                res.redirect("/");
             } else {
                 res.redirect("/usuarios/register")
             }
