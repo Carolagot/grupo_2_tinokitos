@@ -1,47 +1,49 @@
-
-    
-    <%- include("./partials/head") %>
+<%- include("./partials/head") %>
     <link rel="stylesheet" href="/css/stylesLogin.css">
     <title>Tinokitos Login</title>
-</head>
+    </head>
 
-<body>
-    <%-include("./partials/header")%>
-    <main>
-        <section class="contenedorlogin">
-            <form action="/login" method="POST" enctype="multipart/form-data">
-                <div>
-                    <div>
-                        <h4 class="formato">MAIL</h4>
-                        <input class="login1" type="e-mail" name="mail" placeholder="Mail">
-                    </div>
+    <body>
+        <%-include("./partials/header")%>
+            <main>
+                <section class="contenedorlogin">
+                    <form action="/usuarios/login" method="POST">
+                        <div>
+                            <div>
+                                <h4 class="formato">MAIL</h4>
+                                <input class="login1" type="e-mail" name="mail" placeholder="Mail">
+                            </div>
 
-                    <div>
-                        <h4 class="formato"> CONTRASEÑA </h4>
-                        <input class="login1" type="password" name="password"
-                            placeholder="Escribí aquí tu contraseña"><br>
-                    </div>
-                    <div>
-                        <h4 class="formato">RECORDAR MAIL</h4>
-                        <input class="login1" type="checkbox" name="recordarMail">
-                    </div>
+                            <div>
+                                <h4 class="formato"> CONTRASEÑA </h4>
+                                <input class="login1" type="password" name="password"
+                                    placeholder="Escribí aquí tu contraseña"><br>
+                            </div>
+                            <div>
+                                <h4 class="formato">RECORDAR MAIL</h4>
+                                <input class="login1" type="checkbox" name="recordarMail">
+                            </div>
 
-                </div>
-            </form>
+                        </div>
 
-            </div class="formato2">
-            <h4>¿Olvidaste tu contraseña?</h4>
-            <button class="cuenta"><a href="/login"> INGRESAR</a></button>
-            <div class="iniciar">
-                <h4>¿No tenes una cuenta?</h4>
-                <a href="./register"><h4 class="subrayado">Regitrate</h4></a>
-                
-            </div>
-        </section>
-    </main>
-    <%-include("./partials/footer")%>
+                        </div class="formato2">
+                        <h4>¿Olvidaste tu contraseña?</h4>
+                        <input type="submit" class="cuenta" value="INGRESAR"></input>
+                        <div class="iniciar">
+                            <h4>¿No tenes una cuenta?</h4>
+                            <a href="./register">
+                                <h4 class="subrayado">Regitrate</h4>
+                            </a>
 
-</body>
+                        </div>
+                    </form>
 
 
-</html>
+                </section>
+            </main>
+            <%-include("./partials/footer")%>
+
+    </body>
+
+
+    </html>
