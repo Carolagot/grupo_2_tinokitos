@@ -30,8 +30,6 @@ const validateProductDetailForm = [
 ]
 
 
-
-router.get("/", administradorController.vistaAdministrador);
 router.get("/editProduct/:id", administradorController.editProduct);
 router.post("/editProduct", administradorController.editProductPut);
 router.get("/createProduct", administradorController.createProduct);

@@ -28,6 +28,6 @@
         "password": "Meli123",
         "notificaciones": "true",
         "fotosUsuarios": "/imagenes/fotosUsuarios/defaultFotoUsuario.jpg",
-        "tipo": "comprador"
+        "tipo": "usuario"
     }
 ]
