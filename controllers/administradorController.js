@@ -3,14 +3,6 @@ const fs = require("fs");
 const path = require("path");
 
 const administradorController = {
-    headerAdministrador:function (req, res) {
-        const usuariosJson = fs.readFileSync(path.join(__dirname, '../data/userBD.json'), 'utf-8');
-        const usuarios = JSON.parse(usuariosJson);
-        res.render("header", { usuario: usuarioPedido });
-    },
-    vistaAdministrador:function (req, res) {
-        res.render("productListAdministrador");
-    },
     editProduct: function (req, res) {
         const id = req.params.id;
         const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");

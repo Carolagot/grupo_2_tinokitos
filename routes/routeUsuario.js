@@ -31,7 +31,7 @@ const validateUserForm = [
 
 router.get("/login", usuariosController.login);
 router.get("/register", usuariosController.register);
-router.post("/register", upload.single("fotosUsuarios"), usuariosController.postRegister);
+router.post("/register",validateUserForm, upload.single("fotosUsuarios"), usuariosController.postRegister);
 router.post("/login", usuariosController.loginProcess);
 
 module.exports = router;
