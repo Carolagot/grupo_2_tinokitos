@@ -12,7 +12,11 @@
             <p>Editar un producto</p>
             <label for="nombreProducto">Nombre del producto</label>
             <br>
-            <input type="text" value="<%= product.nombre %>" required>
+            <input type="text" value="<%= product.nombre %>" name = "nombre" required>
+            <br>
+            <label for="categoriaProducto">Categoria del producto</label>
+            <br>
+            <input type="text" name="categoria" value="<%= product.categoria %>" required>
             <br>
             <br>
             <label for="descripcionProducto">Descripción del producto</label>
@@ -22,18 +26,19 @@
             <br>
             <label for="fotoProducto">Foto del producto</label>
             <br>
-            <input type="file" name="fotoProducto" value="<%= product.fotoProducto %>" required>
+            <input type="file" name="fotoProducto" required >
             <br>
             <br>
+            <img src="<%= product.fotoProducto %>" alt="fotoProducto">
             <br>
             <label for="precioProducto">Precio del producto</label>
             <br>
-            <input type="number" value="<%= product.precioProducto %>" required>
+            <input type="text" name="precioProducto" value="<%= product.precio %>" required>
             <br>
             <br>
             <label for="stockProducto">Stock</label>
             <br>
-            <input type="number" value="<%= product.stockProducto %>" required>
+            <input type="number" name= "stockProducto" value="<%= product.stockProducto %>" required>
             <br>
             <br>
             <label for="Condicion">Condición</label>

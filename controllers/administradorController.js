@@ -20,9 +20,9 @@ const administradorController = {
         const productosJson = fs.readFileSync(path.join(__dirname, '../data/productsBD.json'), 'utf-8');
         const productos = JSON.parse(productosJson);
         const nuevoProducto = {
-            id: id,
+            id: productos.length + 1,
             nombre: req.body.nombre,
-            descripcion: req.body.descripcion,
+            descripcion: req.body.descripcionProducto,
             fotoProducto: '/imagenes/fotosProductos/' + req.file.filename,
             precio: req.body.precioProducto,
             categoria: req.body.categoria,
@@ -30,9 +30,10 @@ const administradorController = {
             stockProducto: req.body.stockProducto
         };
         productos.push(nuevoProducto);
-        const productosActualizadosJSON = JSON.stringify(productos);
+        const productosActualizados = productos.filter(productoActual => productoActual.id !== id);
+        const productosActualizadosJSON = JSON.stringify(productosActualizados);
         fs.writeFileSync(path.join(__dirname, '../data/productsBD.json'), productosActualizadosJSON, 'utf8');
-        res.redirect('/productos/productDetail/' + nuevoProducto.id);
+        res.redirect('/administrador/productListAdministrador');
     },
     createProduct: function (req, res) {
         res.render("createProduct");
@@ -42,7 +43,7 @@ const administradorController = {
         const productosJson = fs.readFileSync(path.join(__dirname, '../data/productsBD.json'), 'utf-8');
         const productos = JSON.parse(productosJson);
         const nuevoProducto = {
-            id: productos.length +1,
+            id: productos.length + 1,
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             fotoProducto: '/imagenes/fotosProductos/' + req.file.filename,
@@ -61,17 +62,30 @@ const administradorController = {
         //console.log("eliminarProductoDelete");
         const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
         const productos = JSON.parse(productsJson);
-        productosActualizado= productos.filter(productoActual => productoActual.id != id);
+        productosActualizado = productos.filter(productoActual => productoActual.id != id);
         const productosActualizadosJSON = JSON.stringify(productosActualizado, null, " ");
         fs.writeFileSync(path.join(__dirname, '../data/productsBD.json'), productosActualizadosJSON, 'utf8');
         res.send('Se elimino un producto');
     },
-    productListAdministrador: function (req, res) {
-        const productosJson = fs.readFileSync(path.join(__dirname, '../data/productsBD.json'), 'utf-8');
-        const productos = JSON.parse(productosJson);
-        res.render("productListAdministrador", {productos});
-    },
-    
+    productListAdministrador:
+        function (req, res) {
+            const userEmail = req.cookies.email;
+            const productosJson = fs.readFileSync(path.join(__dirname, '../data/productsBD.json'), 'utf-8');
+            const productos = JSON.parse(productosJson);
+            if (userEmail) {
+                const usuariosJson = fs.readFileSync(path.join(__dirname, '../data/userBD.json'), 'utf-8');
+                const usuarios = JSON.parse(usuariosJson);
+                const user = usuarios.find(usuarioActual => usuarioActual.email == userEmail)
+                if (user) {
+                    res.render("productListAdministrador", { usuario: user, productos })
+                } else {
+                    res.render("productListAdministrador", { usuario: { tipo: "usuario" }, productos })
+                }
+            } else {
+                res.render("productListAdministrador", { usuario: { tipo: "usuario" }, productos })
+            }
+            res.render('productListAdministrador', { productos });
+        },
 }
 
 module.exports = administradorController;

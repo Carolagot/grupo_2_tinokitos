@@ -20,15 +20,35 @@ const mainController = {
         res.render('index');
     },
     filosofia: function (req, res) {
+        const userEmail = req.cookies.email;
+        if (userEmail) {
+            const usuariosJson = fs.readFileSync(path.join(__dirname, '../data/userBD.json'), 'utf-8');
+            const usuarios = JSON.parse(usuariosJson);
+            const user = usuarios.find (usuarioActual => usuarioActual.email == userEmail)
+            if (user) {
+                res.render ("filosofia", {usuario: user})
+            } else {
+                res.render ("filosofia", {usuario: {tipo:"usuario"}})
+            }
+        }else {
+            res.render ("filosofia", {usuario: {tipo:"usuario"}})
+        }
         res.render('filosofia');
     },
     contactanos: function (req, res) {
-        const usuariosJson = fs.readFileSync(path.join(__dirname, '../data/userBD.json'), 'utf-8');
-        const usuarios = JSON.parse(usuariosJson);
-        const usuarioLogueado = req.cookies("email");
-
-        const usuarioCookie = usuarios.find(usuarioActual => usuarioActual.email == usuarioLogueado);
-        console.log(usuarioCookie)
+        const userEmail = req.cookies.email;
+        if (userEmail) {
+            const usuariosJson = fs.readFileSync(path.join(__dirname, '../data/userBD.json'), 'utf-8');
+            const usuarios = JSON.parse(usuariosJson);
+            const user = usuarios.find (usuarioActual => usuarioActual.email == userEmail)
+            if (user) {
+                res.render ("contactanos", {usuario: user})
+            } else {
+                res.render ("contactanos", {usuario: {tipo:"usuario"}})
+            }
+        }else {
+            res.render ("contactanos", {usuario: {tipo:"usuario"}})
+        }
         res.render('contactanos');
     },
 };

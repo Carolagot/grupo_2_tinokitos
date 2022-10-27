@@ -31,7 +31,7 @@ const validateProductDetailForm = [
 
 
 router.get("/editProduct/:id", administradorController.editProduct);
-router.post("/editProduct", administradorController.editProductPut);
+router.post("/editProduct",upload.single("fotoProducto"), administradorController.editProductPut);
 router.get("/createProduct", administradorController.createProduct);
 router.post("/createProduct",validateProductDetailForm, upload.single("fotoProducto"), administradorController.createProductPost);
 router.post("/eliminarProductoDelete/:id", administradorController.eliminarProductoDelete);
