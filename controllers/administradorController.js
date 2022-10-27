@@ -19,8 +19,8 @@ const administradorController = {
         const id = req.params.id;
         const productosJson = fs.readFileSync(path.join(__dirname, '../data/productsBD.json'), 'utf-8');
         const productos = JSON.parse(productosJson);
-        const nuevoProducto = {
-            id: productos.length + 1,
+        let productoEditado = {
+            id: id,
             nombre: req.body.nombre,
             descripcion: req.body.descripcionProducto,
             fotoProducto: '/imagenes/fotosProductos/' + req.file.filename,
@@ -29,9 +29,19 @@ const administradorController = {
             condicion: req.body.condicion,
             stockProducto: req.body.stockProducto
         };
-        productos.push(nuevoProducto);
-        const productosActualizados = productos.filter(productoActual => productoActual.id !== id);
-        const productosActualizadosJSON = JSON.stringify(productosActualizados);
+        productos.forEach(productoActual => {
+            if (productoActual.id == id) {
+                    productoActual.nombre == productoEditado.nombre,
+                    productoActual.descripcion == productoEditado.descripcion,
+                    productoActual.fotoProducto == productoEditado.fotoProducto,
+                    productoActual.precio == productoEditado.precio,
+                    productoActual.categoria == productoEditado.categoria,
+                    productoActual.condicion == productoEditado.condicion,
+                    productoActual.stockProducto == productoEditado.stockProducto
+            }
+        });
+        console.log(productoEditado);
+        const productosActualizadosJSON = JSON.stringify(productos);
         fs.writeFileSync(path.join(__dirname, '../data/productsBD.json'), productosActualizadosJSON, 'utf8');
         res.redirect('/administrador/productListAdministrador');
     },
