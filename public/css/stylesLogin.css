@@ -115,14 +115,16 @@ main {
 
 input.login1 {
     border-radius: 5px;
-    border: solid 1px black;
+    border: solid 2px black;
     width: 200px;
+    height: 25px;
 }
 
 .cuenta {
     background-color:#c4d8d1;
     color: white;
     margin-top: 20px;
+    margin-right:45px;
     font-size: 18px;
     border-radius: 5px;
      }
@@ -140,7 +142,7 @@ input.login1 {
 
 .subrayado {
     text-decoration: underline;
-    margin-left: 20px;
+    margin-left: 60px;
 }
 
 footer {
