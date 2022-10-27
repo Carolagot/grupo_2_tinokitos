@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,300&family=Roboto:ital,wght@1,300&display=swap');
+
+body {
+    background-color: #686f6a;
+    font-family: 'Fraunces', serif;
+    color:#fff8f6 ;
+    padding: 20px;
+}
+i{
+    font-size: 30px;
+    color: #fff8f6;
+    position:absolute;
+    right: 30px;
+    top: 30px;
+}
+div {
+    padding: 40px;
+    border: dotted 3px #fff8f6;
+    text-align: center;
+    margin: auto;
+}
+p{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+button{
+    border-radius: 5px;
+    border: solid 1px black;
+    width: 30%;
+    height: 20px;
+    text-align: center;
+    color:#686f6a;
+    background-color:#fff8f6 
+}

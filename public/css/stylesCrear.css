@@ -13,6 +13,9 @@ i{
     right: 30px;
     top: 30px;
 }
+a:link{
+color:#fff8f6
+}
 p{
     font-size: 30px;
     font-weight: bold;

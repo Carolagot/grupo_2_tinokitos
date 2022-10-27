@@ -3,6 +3,16 @@
 * {
     box-sizing: border-box;
 }
+button{
+    color:#686f6a ;
+    background-color:#c4d8d1 ;
+    width: 18%;
+    height: 30px;
+    font-weight: bold;
+    font-family: "Fraunces";
+    font-size: 16px;
+    margin:center
+}
 
 body {
     background-color: #fff8f6;

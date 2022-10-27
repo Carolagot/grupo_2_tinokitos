@@ -75,7 +75,7 @@ const administradorController = {
         productosActualizado = productos.filter(productoActual => productoActual.id != id);
         const productosActualizadosJSON = JSON.stringify(productosActualizado, null, " ");
         fs.writeFileSync(path.join(__dirname, '../data/productsBD.json'), productosActualizadosJSON, 'utf8');
-        res.send('Se elimino un producto');
+        res.render('productoEliminado');
     },
     productListAdministrador:
         function (req, res) {
@@ -94,7 +94,7 @@ const administradorController = {
             } else {
                 res.render("productListAdministrador", { usuario: { tipo: "usuario" }, productos })
             }
-            res.render('productListAdministrador', { productos });
+            res.render('productListAdministrador', { productos, usuario });
         },
 }
 

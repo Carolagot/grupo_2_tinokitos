@@ -1,6 +1,6 @@
 <%- include("./partials/head") %>
     <link rel="stylesheet" href="/css/stylesList.css">
-    <title>Tinokitos Lista de Productos</title>
+    <title>Administrar Productos</title>
     </head>
 
     <body>
@@ -17,7 +17,11 @@
 
                     <div class="titulo">
                         <h1>Administrar Productos</h1>
+                        <a href="/administrador/createProduct"><button>CREAR PRODUCTO</button></a>
                     </div>
+                    
+                    <br>
+                    <br>
                     <div class="contenedor-productos">
                         <% productos.forEach (producto=> { %>
                             <article>
