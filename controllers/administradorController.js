@@ -38,7 +38,7 @@ const administradorController = {
         const productosActualizadosJSON = JSON.stringify(listaSinEditado);
         fs.writeFileSync(path.join(__dirname, '../data/productsBD.json'), productosActualizadosJSON, 'utf8');
 
-        res.redirect("../administrador/productListAdministrador")
+        res.redirect("/administrador/productListAdministrador")
     },
     createProduct: function (req, res) {
         res.render("createProduct");

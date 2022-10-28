@@ -4,6 +4,7 @@ const multer = require("multer");
 const path = require("path");
 const administradorController = require("../controllers/administradorController");
 const { body }= require("express-validator");
+const admMiddleware = require('../middlewares/admMiddleware')
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -30,12 +31,12 @@ const validateProductDetailForm = [
 ]
 
 
-router.get("/editProduct/:id", administradorController.editProduct);
-router.post("/editProduct",upload.single("fotoProducto"), administradorController.editProductPut);
-router.get("/createProduct", administradorController.createProduct);
-router.post("/createProduct",validateProductDetailForm, upload.single("fotoProducto"), administradorController.createProductPost);
-router.post("/eliminarProductoDelete/:id", administradorController.eliminarProductoDelete);
-router.get("/productListAdministrador",administradorController.productListAdministrador);
+router.get("/editProduct/:id", admMiddleware,administradorController.editProduct);
+router.put("/editProduct/:id",admMiddleware,upload.single("fotoProducto"), administradorController.editProductPut);
+router.get("/createProduct", admMiddleware, administradorController.createProduct);
+router.post("/createProduct",admMiddleware, validateProductDetailForm, upload.single("fotoProducto"), administradorController.createProductPost);
+router.post("/eliminarProductoDelete/:id", admMiddleware, administradorController.eliminarProductoDelete);
+router.get("/productListAdministrador",admMiddleware, administradorController.productListAdministrador);
 
 
 module.exports = router;

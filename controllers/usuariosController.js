@@ -5,11 +5,7 @@ const bcryptjs = require("bcryptjs");
 
 const usuariosController = {
     login: function (req, res) {
-        res.render("login", {
-            usuario: {
-                tipo: "usuario"
-            }
-        });
+        res.render("login", { usuario: { tipo: "usuario" } })
     },
     register: function (req, res) {
         res.render("register");
@@ -44,19 +40,23 @@ const usuariosController = {
         const usuarioLogueado = usuarios.find(thisUser => thisUser.email === userData.mail); //busca el usuario con el email ingresado
         console.log(usuarioLogueado)
         if (usuarioLogueado) { // si se encontro el usuario con ese email..
-            
-          //  let contraseñaCorrecta = bcryptjs.compareSync(userData.password, usuarioLogueado.password);
-          let contraseñaCorrecta = userData.password==usuarioLogueado.password  //chequeamos si la contraseña es correcta
-          if (contraseñaCorrecta) { // si es correcta...
+
+            //  let contraseñaCorrecta = bcryptjs.compareSync(userData.password, usuarioLogueado.password);
+            let contraseñaCorrecta = userData.password == usuarioLogueado.password  //chequeamos si la contraseña es correcta
+            if (contraseñaCorrecta) { // si es correcta...
                 res.cookie("email", req.body.email, { maxAge: 10800 }); //creamos una cookie
                 res.redirect("/"); //redireccionamos al index
             } else { //si no es correcta
                 res.redirect("/usuarios/login") //te envia a loguearte
             }
-        }else{ // si no se encontro usuario con ese email
+        } else { // si no se encontro usuario con ese email
             res.redirect("/usuarios/login")
         }
-    }
+    },
+    logOut: function (req, res) {
+        res.clearCookie("email");
+        res.redirect("/")
+    },
 }
 
 module.exports = usuariosController;
