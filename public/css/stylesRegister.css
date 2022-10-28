@@ -218,6 +218,7 @@ footer {
 }
 
 .cuenta {
+    font-family: 'Fraunces', serif;
     background-color: #c4d8d1;
     color: white;
     margin-top: 0px;
@@ -226,10 +227,18 @@ footer {
 }
 
 .borrar {
-    margin: 0 0 0 15px
+    font-family: 'Fraunces', serif;
+    margin: 0 0 0 15px;
+    font-size: 18px;
+    color: black;
+    background-color: #f0bc68
 }
 
 .volver {
+    font-family: 'Fraunces', serif;
+    color: black;
+    font-size: 18px;
+    background-color: #f0bc68;
     margin-left: 15px;
 }
 

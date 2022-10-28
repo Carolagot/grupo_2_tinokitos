@@ -55,9 +55,11 @@ const usuariosController = {
         }
     },
     logOut: function (req, res) {
-        res.clearCookie("email");
-        res.redirect("/")
-    },
-}
+            res.clearCookie('email');
+            req.session.destroy();
+            return res.redirect('/');
+        }
+    }
+
 
 module.exports = usuariosController;
