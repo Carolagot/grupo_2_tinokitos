@@ -30,4 +30,5 @@ Por otro lado varias integrantes contamos con experiencia en el rubro por tanto 
 
 - https://www.lablancherie.com/ ==> Nos gustó de esta página la paleta de colores cálidos, da la sensación de organización y serenidad que queremos transmitir con nuestro proyecto.
 
-
+**Datos importantes**:
+Para poder ingresar a la sección de administrador se debe utilizar el siguiente e-mail "ngonzalez@gmail.com", con la contraseña "1234".

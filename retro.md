@@ -69,4 +69,24 @@ UTILIZAMOS MÉTODO ESTRELLA DE MAR:
 5. **Dejar de hacer:**
 - No avanzar tanto enel proyecto si alguna de las integrantes no está presente.
 
+RETROSPECTIVA SPRINT 5:
+
+UTILIZAMOS MÉTODO ESTRELLA DE MAR: (Aprendizajes para futuras oportunidades de trabajo en equipo)
+1.  **Comenzar a hacer:**
+- Organización fija del tiempo de trabajo, es esencial tener un horario diario de encuentro.
+
+
+2.	**Hacer más:**
+- Que todas estemos entendiendo todos los cambios y todo lo que se sube.
+- Revisar y navegar por el proyecto cuando otro integrante del equipo trabajo sobre algun segmento del proyecto distinto al propio.
+
+3.	**Continuar haciendo:**
+- Comunicación fluida.
+- Trabajo integrado
+
+4.	**Hacer menos:**
+- No encontramos algo en particular.
+
+5. **Dejar de hacer:**
+- No seguir avanzando cuando estamos trabados. es mejor continuar con otra funcionalidad y volver cuando ya estemos despejados.
 
