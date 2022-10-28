@@ -15,12 +15,13 @@ const administradorController = {
         }
     },
     editProductPut: function (req, res) {
-        console.log(req.file)
-        const id = req.params.id;
-        const productosJson = fs.readFileSync(path.join(__dirname, '../data/productsBD.json'), 'utf-8');
-        const productos = JSON.parse(productosJson);
-        let productoEditado = {
-            id: id,
+        let idProducto = Number(req.params.id);
+        const productsJson = fs.readFileSync(path.join(__dirname, "../data/productsBD.json"), "utf-8");
+        const productos = JSON.parse(productsJson);
+        let listaSinEditado = productos.filter(productoActual => productoActual.id != idProducto);
+
+        let productoActualizado = {
+            id: idProducto,
             nombre: req.body.nombre,
             descripcion: req.body.descripcionProducto,
             fotoProducto: '/imagenes/fotosProductos/' + req.file.filename,
@@ -28,22 +29,16 @@ const administradorController = {
             categoria: req.body.categoria,
             condicion: req.body.condicion,
             stockProducto: req.body.stockProducto
-        };
-        productos.forEach(productoActual => {
-            if (productoActual.id == id) {
-                    productoActual.nombre == productoEditado.nombre,
-                    productoActual.descripcion == productoEditado.descripcion,
-                    productoActual.fotoProducto == productoEditado.fotoProducto,
-                    productoActual.precio == productoEditado.precio,
-                    productoActual.categoria == productoEditado.categoria,
-                    productoActual.condicion == productoEditado.condicion,
-                    productoActual.stockProducto == productoEditado.stockProducto
-            }
-        });
-        console.log(productoEditado);
-        const productosActualizadosJSON = JSON.stringify(productos);
+        }
+
+        productoAEditar = productoActualizado;
+
+        listaSinEditado.push(productoAEditar);
+
+        const productosActualizadosJSON = JSON.stringify(listaSinEditado);
         fs.writeFileSync(path.join(__dirname, '../data/productsBD.json'), productosActualizadosJSON, 'utf8');
-        res.redirect('/administrador/productListAdministrador');
+
+        res.redirect("../administrador/productListAdministrador")
     },
     createProduct: function (req, res) {
         res.render("createProduct");
