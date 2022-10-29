@@ -10,33 +10,38 @@
                     <form action="/usuarios/login" method="POST">
                         <div>
                             <div>
-                                <h4 class="formato">MAIL</h4>
+                                <label class="formato" name="mail">MAIL</label>
+                                <br>
                                 <input class="login1" type="e-mail" name="mail" placeholder="Mail">
                             </div>
+                            <br>
+                            <br>
 
                             <div>
-                                <h4 class="formato"> CONTRASEÑA </h4>
+                                <label class="formato" name="password"> CONTRASEÑA </label>
+                                <br>
                                 <input class="login1" type="password" name="password"
                                     placeholder="Escribí aquí tu contraseña"><br>
                             </div>
-                            <div class="formato">
-                                <label name="recordarMail"> RECORDAME </label><input class="login1" type="checkbox" >
+                            <br>
+                            <br>
+                            <div>
+                                <label class="formato" name="recordarMail"> RECORDAME </label><input type="checkbox"
+                                    name="recordarMail">
                             </div>
 
                         </div>
 
-                        </div class="formato2">
-                        
                         <div class="iniciar">
-                        <input type="submit" class="cuenta" value="INGRESAR"></input>
-                            </div>
+                            <input type="submit" class="cuenta" value="INGRESAR"></input>
+                        </div>
                         <br>
 
-                            <h4 class="formato">¿No tenes una cuenta?</h4>
-                        
-                            <a href="./register">
-                                <h4 class="subrayado">Registrate</h4>
-                            </a>
+                        <h4 class="formato">¿No tenes una cuenta?</h4>
+
+                        <a href="./register">
+                            <h4 class="subrayado">Registrate</h4>
+                        </a>
 
                         </div>
                     </form>

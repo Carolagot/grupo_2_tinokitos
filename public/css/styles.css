@@ -254,6 +254,12 @@ footer {
     position: absolute;
     text-align: center;
     left: 28%;
+    border-radius: 5px;
+    transition: all 450ms;
+}
+.boton-ver:hover{
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -267,8 +273,13 @@ footer {
     font-family: "Fraunces semibold";
     font-size: 20px;
     padding: 10px 10px;
+    border-radius: 5px;
+    transition: all 450ms;
 }
-
+.boton:hover{
+    text-decoration: none;
+    color: #686f6a;
+}
 .contenedor-productos-cel {
     display: flex;
     flex-direction: column;

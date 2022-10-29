@@ -100,16 +100,6 @@
         "stockProducto": "6"
     },
     {
-        "id": 11,
-        "nombre": "andador",
-        "descripcion": "dibje",
-        "fotoProducto": "/imagenes/fotosProductos/1666190553994-andadorazullove.jpg",
-        "precio": "8900",
-        "categoria": "Hora de Pasear",
-        "condicion": "General",
-        "stockProducto": "2"
-    },
-    {
         "id": 12,
         "nombre": "Vasitos con pico de Silicona",
         "descripcion": "Vasos de Silicona con pico. Colores Pasteles. Anti vuelco.\r\n",

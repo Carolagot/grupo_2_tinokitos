@@ -44,7 +44,7 @@ const usuariosController = {
             //  let contraseñaCorrecta = bcryptjs.compareSync(userData.password, usuarioLogueado.password);
             let contraseñaCorrecta = userData.password == usuarioLogueado.password  //chequeamos si la contraseña es correcta
             if (contraseñaCorrecta) { // si es correcta...
-                res.session.userLogued = usuarioLogueado
+                res.session.userLogged = usuarioLogueado
                 res.cookie("email", req.body.email, { maxAge: 10800 }); //creamos una cookie
                 res.redirect("/"); //redireccionamos al index
             } else { //si no es correcta
@@ -54,7 +54,7 @@ const usuariosController = {
             res.redirect("/usuarios/login")
         }
     },
-    logOut: function (req, res) {
+    logout: function (req, res) {
             res.clearCookie('email');
             req.session.destroy();
             return res.redirect('/');
