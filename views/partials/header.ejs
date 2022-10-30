@@ -21,13 +21,13 @@
         </div>
         <a href="/"><img src="/imagenes/logo achicado.jpg" alt="logo"></a>
         <div class="crearIniciarCarrito">
-            <% if (usuario.tipo !== "usuario" || usuario.tipo !== "administrador" ) { %>
                 <a href="/usuarios/register">Crear Sesión</a>
                 <p>  |  </p>
                 <a href="/usuarios/login">Iniciar Sesión</a>
-               <% } else { %>
+                <p>  |  </p>
                 <a href="/usuarios/logout">Cerrar Sesión</a>
-                <% } %>
+             
+
 
             
             <div class="carrito"><a href="/productos/productCart"><i class="fa-solid fa-cart-shopping"></i></a></div>
@@ -41,8 +41,8 @@
         <a href="../productos/horaDeComer">Hora de Comer</a>
         <a href="/filosofia">Filosofia</a>
         <a href="/contactanos">Contacto</a>
-        <% if (usuario.tipo=="administrador") { %>
-         <a href="/administrador">Administrar</a>
+        <% if (usuario.tipo="administrador") { %>
+         <a href="/administrador/productListAdministrador">Administrar</a>
         <% } %>
          
     </div>

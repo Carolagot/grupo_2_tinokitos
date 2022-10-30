@@ -1,33 +1,52 @@
 [
     {
-        "id": "1",
+        "id": 1667065875586,
+        "nombre": "Carolina Gotbeter",
+        "email": "carolagot@yahoo.com.ar",
+        "telefono": "39030725",
+        "password": "$2a$10$tgovuv5qdaCoDnGwJADoQORohYkPPx8vSTGmolltpeXOEDgsrLz52",
+        "fotosUsuarios": "/imagenes/fotosUsuarios/1667065875374-9e42b9b0d5a12fc3078724af8dcd3039.jpg",
+        "notificaciones": "on",
+        "tipo": "usuario"
+    },
+    {
+        "id": 1667137346399,
         "nombre": "Nicolás Gonzalez",
         "email": "ngonzalez@gmail.com",
         "telefono": "115039655",
-        "password": "1234",
-        "notificaciones": "true",
-        "fotosUsuarios": "/imagenes/fotosUsuarios/defaultFotoUsuario.jpg",
+        "password": "$2a$10$Y2Hp5F.2CAulefx0eIZZPO1LSXl5oGpNzIzvVnpPSEjnV2riqSF52",
+        "fotosUsuarios": "/imagenes/fotosUsuarios/1667137346151-111.jpg",
+        "notificaciones": "on",
         "tipo": "administrador"
     },
-
     {
-        "id": "2",
+        "id": 1667138122659,
         "nombre": "Mónica Paniagua",
         "email": "p_monica@hotmail.com.ar",
         "telefono": "115039655",
-        "password": "abc",
-        "notificaciones": "true",
-        "fotosUsuarios": "/imagenes/fotosUsuarios/defaultFotoUsuario.jpg",
-        "tipo": "comprador"
+        "password": "$2a$10$aY20qNVBEfTKkjy8EmU8ROi2WxSTz0qXdFrM4lkw3f63UjvitOl3S",
+        "fotosUsuarios": "/imagenes/fotosUsuarios/1667138122467-beautiful-woman-avatar-character-icon-free-vector (1).jpg",
+        "notificaciones": "on",
+        "tipo": "usuario"
     },
     {
-        "id":"3",
+        "id": 1667138691447,
         "nombre": "Meli Spiler",
         "email": "melispiler@hotmail.com",
         "telefono": "115471485",
-        "password": "Meli123",
-        "notificaciones": "true",
-        "fotosUsuarios": "/imagenes/fotosUsuarios/defaultFotoUsuario.jpg",
+        "password": "$2a$10$.wOgrpkHXeMQ3Mn/QN1hguoxkENmuYvzVydDX5Ek.Gcv/e0nAm4zO",
+        "fotosUsuarios": "/imagenes/fotosUsuarios/1667138691041-beautiful-latin-woman-avatar-character-icon-free-vector.jpg",
+        "notificaciones": "on",
+        "tipo": "usuario"
+    },
+    {
+        "id": 1667141734346,
+        "nombre": "Carolina Gotbeter",
+        "email": "carolina@openmouth.com.ar",
+        "telefono": "49030725",
+        "password": "$2a$10$2.I/jhVzz4M2fV2pwsNDbetoUsn9i4mrNrUJRvbZlyZhgcGssli62",
+        "fotosUsuarios": "/imagenes/fotosUsuarios/1667141733963-beautiful-woman-avatar-character-icon-free-vector (1).jpg",
+        "notificaciones": "on",
         "tipo": "usuario"
     }
 ]

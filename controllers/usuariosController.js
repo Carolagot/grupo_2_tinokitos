@@ -24,28 +24,26 @@ const usuariosController = {
             categoria: req.body.categoria,
             fotosUsuarios: '/imagenes/fotosUsuarios/' + req.file.filename,
             notificaciones: req.body.notificaciones,
-            tipo: "comprador"
+            tipo: "usuario"
         };
         usuarios.push(nuevoUsuario);
         const usuariosActualizadosJSON = JSON.stringify(usuarios);
         fs.writeFileSync(path.join(__dirname, '../data/userBD.json'), usuariosActualizadosJSON, 'utf8');
         res.cookie("email", req.body.email, { maxAge: 10800 });
-        res.redirect("/login");
+        res.redirect("/usuarios/login");
     },
     loginProcess: (req, res) => {
         const userData = req.body; //guarda los datos ingresados en el formulario de login
         const usersJSON = fs.readFileSync(path.join(__dirname, "../data/userBD.json"), "utf-8"); //buscamos usuario en la base de datos
         const usuarios = JSON.parse(usersJSON);
-
         const usuarioLogueado = usuarios.find(thisUser => thisUser.email === userData.mail); //busca el usuario con el email ingresado
         console.log(usuarioLogueado)
         if (usuarioLogueado) { // si se encontro el usuario con ese email..
 
-            //  let contraseñaCorrecta = bcryptjs.compareSync(userData.password, usuarioLogueado.password);
-            let contraseñaCorrecta = userData.password == usuarioLogueado.password  //chequeamos si la contraseña es correcta
+            let contraseñaCorrecta = bcryptjs.compareSync(userData.password, usuarioLogueado.password);
+            // let contraseñaCorrecta = userData.password == usuarioLogueado.password  //chequeamos si la contraseña es correcta
             if (contraseñaCorrecta) { // si es correcta...
-                res.session.userLogged = usuarioLogueado
-                res.cookie("email", req.body.email, { maxAge: 10800 }); //creamos una cookie
+                res.cookie("email", req.body.email, { maxAge: 1080000 }); //creamos una cookie
                 res.redirect("/"); //redireccionamos al index
             } else { //si no es correcta
                 res.redirect("/usuarios/login") //te envia a loguearte
@@ -55,8 +53,7 @@ const usuariosController = {
         }
     },
     logout: function (req, res) {
-            res.clearCookie('email');
-            req.session.destroy();
+            res.clearCookie('Email');
             return res.redirect('/');
         }
     }

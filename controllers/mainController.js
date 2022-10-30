@@ -5,6 +5,7 @@ const path = require("path");
 const mainController = {
     home: function (req, res) {
         const userEmail = req.cookies.email;
+        console.log(userEmail);
         if (userEmail) {
             const usuariosJson = fs.readFileSync(path.join(__dirname, '../data/userBD.json'), 'utf-8');
             const usuarios = JSON.parse(usuariosJson);
