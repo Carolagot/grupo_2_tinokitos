@@ -46,7 +46,7 @@ const usuariosController = {
             // let contraseñaCorrecta = userData.password == usuarioLogueado.password  //chequeamos si la contraseña es correcta
             if (contraseñaCorrecta) {// si es correcta...
                 if(req.body.recordarMail) {
-                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 600) * 2 })
+                    res.cookie('userEmail', req.body.email, {maxAge: 10800 })
                 }
                 //res.clearCookie("email");
                 req.session.usuarioLogueado = usuarioLogueado;

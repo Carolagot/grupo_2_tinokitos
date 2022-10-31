@@ -1,6 +1,6 @@
 function authMiddleware(req, res, next) {
     let usuarioLogueado = req.session.usuarioLogueado 
-    if (usuarioLogueado.tipo ==="usuario") {
+    if (usuarioLogueado != undefined && usuarioLogueado.tipo ==="usuario") {
     } else {
         res.render("soloUsuarios")
     };
