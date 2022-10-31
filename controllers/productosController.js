@@ -83,7 +83,6 @@ const productosController = {
         }else {
             res.render ("horaDeComer", {usuarioLogueado: req.session.usuarioLogueado,productosComer})
         }
-        res.render('horaDeComer', {usuarioLogueado: req.session.usuarioLogueado, productosComer });
     },
     productHoraDeJugar: function (req, res) {
         const userEmail = req.cookies.email;
@@ -103,7 +102,6 @@ const productosController = {
         }else {
             res.render ("horaDeJugar", {usuarioLogueado: req.session.usuarioLogueado,productosJugar})
         }
-        res.render('horaDeJugar',{usuarioLogueado: req.session.usuarioLogueado, productosJugar });
     },
     productHoraDeDormir: function (req, res) {
         const userEmail = req.cookies.email;
@@ -123,7 +121,6 @@ const productosController = {
         }else {
             res.render ("horaDeDormir", {usuarioLogueado: req.session.usuarioLogueado,productosDormir})
         }
-        res.render('horaDeDormir',{usuarioLogueado: req.session.usuarioLogueado,productosDormir });
     },
     productHoraDePasear: function (req, res) {
         const userEmail = req.cookies.email;
@@ -143,7 +140,6 @@ const productosController = {
         }else {
             res.render ("horaDePasear", {usuarioLogueado: req.session.usuarioLogueado ,productosPasear})
         }
-        res.render('horaDePasear',{usuarioLogueado: req.session.usuarioLogueado,productosPasear });
     },
 }
 

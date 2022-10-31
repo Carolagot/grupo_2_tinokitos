@@ -21,8 +21,6 @@ const mainController = {
             res.render ("index", {usuarioLogueado: req.session.usuarioLogueado}
             )
         }
-        res.render('index',{usuarioLogueado: req.session.usuarioLogueado}
-        );
     },
     filosofia: function (req, res) {
         const userEmail = req.cookies.email;
@@ -41,8 +39,6 @@ const mainController = {
             res.render ("filosofia", {usuarioLogueado: req.session.usuarioLogueado}
             )
         }
-        res.render('filosofia',{usuarioLogueado: req.session.usuarioLogueado}
-        );
     },
     contactanos: function (req, res) {
         const userEmail = req.cookies.email;
