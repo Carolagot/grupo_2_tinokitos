@@ -57,8 +57,6 @@ const mainController = {
             res.render ("contactanos", {usuarioLogueado: req.session.usuarioLogueado}
             )
         }
-        res.render('contactanos',{usuarioLogueado: req.session.usuarioLogueado}
-        );
     },
 };
 

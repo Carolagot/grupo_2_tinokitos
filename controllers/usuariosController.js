@@ -40,7 +40,6 @@ const usuariosController = {
         const usuarios = JSON.parse(usersJSON);
         const usuarioLogueado = usuarios.find(thisUser => thisUser.email === userData.mail); //busca el usuario con el email ingresado
         console.log(usuarioLogueado)
-        console.log("Hola");
         if (usuarioLogueado) { // si se encontro el usuario con ese email..
 
             let contraseñaCorrecta = bcryptjs.compareSync(userData.password, usuarioLogueado.password);
