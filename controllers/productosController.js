@@ -10,14 +10,18 @@ const productosController = {
             const usuarios = JSON.parse(usuariosJson);
             const user = usuarios.find(usuarioActual => usuarioActual.email == userEmail)
             if (user) {
-                res.render("productCart", { usuario: user })
+                res.render("productCart", {usuarioLogueado: req.session.usuarioLogueado}
+)
             } else {
-                res.render("productCart", { usuario: { tipo: "usuario" } })
+                res.render("productCart", {usuarioLogueado: req.session.usuarioLogueado}
+                )
             }
         } else {
-            res.render("productCart", { usuario: { tipo: "usuario" } })
+            res.render("productCart", {usuarioLogueado: req.session.usuarioLogueado}
+            )
         }
-        res.render('productCart');
+        res.render('productCart',{usuarioLogueado: req.session.usuarioLogueado}
+        );
     },
     productList: function (req, res) {
         const userEmail = req.cookies.email;
@@ -28,14 +32,14 @@ const productosController = {
             const usuarios = JSON.parse(usuariosJson);
             const user = usuarios.find(usuarioActual => usuarioActual.email == userEmail)
             if (user) {
-                res.render("productList", { usuario: user, productos })
+                res.render("productList", {usuarioLogueado: req.session.usuarioLogueado, productos })
             } else {
-                res.render("productList", { usuario: { tipo: "usuario" }, productos })
+                res.render("productList", {usuarioLogueado: req.session.usuarioLogueado, productos })
             }
         } else {
-            res.render("productList", { usuario: { tipo: "usuario" }, productos })
+            res.render("productList", {usuarioLogueado: req.session.usuarioLogueado, productos })
         }
-        res.render('productList', { productos });
+        res.render('productList', { productos,usuarioLogueado: req.session.usuarioLogueado});
     },
     productDetail: function (req, res) {
         const userEmail = req.cookies.email;
@@ -49,14 +53,14 @@ const productosController = {
                 const usuarios = JSON.parse(usuariosJson);
                 const user = usuarios.find(usuarioActual => usuarioActual.email == userEmail)
                 if (user) {
-                    res.render("productDetail", { usuario: user, product: productoPedido })
+                    res.render("productDetail", {usuarioLogueado: req.session.usuarioLogueado, product: productoPedido })
                 } else {
-                    res.render("productDetail", { usuario: { tipo: "usuario" }, product: productoPedido })
+                    res.render("productDetail", {usuarioLogueado: req.session.usuarioLogueado, product: productoPedido })
                 }
             } else {
-                res.render("productDetail", { usuario: { tipo: "usuario" }, product: productoPedido })
+                res.render("productDetail", {usuarioLogueado: req.session.usuarioLogueado, product: productoPedido })
             }
-            res.render('productDetail', { product: productoPedido });
+            res.render('productDetail', {usuarioLogueado: req.session.usuarioLogueado,product: productoPedido });
         } else {
             res.send('El producto no existe');
         }
@@ -72,14 +76,14 @@ const productosController = {
             const usuarios = JSON.parse(usuariosJson);
             const user = usuarios.find (usuarioActual => usuarioActual.email == userEmail)
             if (user) {
-                res.render ("horaDeComer", {usuario: user, productosComer})
+                res.render ("horaDeComer", {usuarioLogueado: req.session.usuarioLogueado, productosComer})
             } else {
-                res.render ("horaDeComer", {usuario: {tipo:"usuario"},productosComer})
+                res.render ("horaDeComer", {usuarioLogueado: req.session.usuarioLogueado,productosComer})
             }
         }else {
-            res.render ("horaDeComer", {usuario: {tipo:"usuario"},productosComer})
+            res.render ("horaDeComer", {usuarioLogueado: req.session.usuarioLogueado,productosComer})
         }
-        res.render('horaDeComer',{ productosComer });
+        res.render('horaDeComer', {usuarioLogueado: req.session.usuarioLogueado, productosComer });
     },
     productHoraDeJugar: function (req, res) {
         const userEmail = req.cookies.email;
@@ -92,14 +96,14 @@ const productosController = {
             const usuarios = JSON.parse(usuariosJson);
             const user = usuarios.find (usuarioActual => usuarioActual.email == userEmail)
             if (user) {
-                res.render ("horaDeJugar", {usuario: user, productosJugar})
+                res.render ("horaDeJugar",{usuarioLogueado: req.session.usuarioLogueado, productosJugar})
             } else {
-                res.render ("horaDeJugar", {usuario: {tipo:"usuario"},productosJugar})
+                res.render ("horaDeJugar", {usuarioLogueado: req.session.usuarioLogueado,productosJugar})
             }
         }else {
-            res.render ("horaDeJugar", {usuario: {tipo:"usuario"},productosJugar})
+            res.render ("horaDeJugar", {usuarioLogueado: req.session.usuarioLogueado,productosJugar})
         }
-        res.render('horaDeJugar',{ productosJugar });
+        res.render('horaDeJugar',{usuarioLogueado: req.session.usuarioLogueado, productosJugar });
     },
     productHoraDeDormir: function (req, res) {
         const userEmail = req.cookies.email;
@@ -112,14 +116,14 @@ const productosController = {
             const usuarios = JSON.parse(usuariosJson);
             const user = usuarios.find (usuarioActual => usuarioActual.email == userEmail)
             if (user) {
-                res.render ("horaDeDormir", {usuario: user, productosJugar})
+                res.render ("horaDeDormir", {usuarioLogueado: req.session.usuarioLogueado, productosJugar})
             } else {
-                res.render ("horaDeDormir", {usuario: {tipo:"usuario"}, productosDormir})
+                res.render ("horaDeDormir",{usuarioLogueado: req.session.usuarioLogueado, productosDormir})
             }
         }else {
-            res.render ("horaDeDormir", {usuario: {tipo:"usuario"},productosDormir})
+            res.render ("horaDeDormir", {usuarioLogueado: req.session.usuarioLogueado,productosDormir})
         }
-        res.render('horaDeDormir',{ productosDormir });
+        res.render('horaDeDormir',{usuarioLogueado: req.session.usuarioLogueado,productosDormir });
     },
     productHoraDePasear: function (req, res) {
         const userEmail = req.cookies.email;
@@ -132,14 +136,14 @@ const productosController = {
             const usuarios = JSON.parse(usuariosJson);
             const user = usuarios.find (usuarioActual => usuarioActual.email == userEmail)
             if (user) {
-                res.render ("horaDePasear", {usuario: user, productosPasear})
+                res.render ("horaDePasear", {usuarioLogueado: req.session.usuarioLogueado, productosPasear})
             } else {
-                res.render ("horaDePasear", {usuario: {tipo:"usuario"},productosPasear})
+                res.render ("horaDePasear", {usuarioLogueado: req.session.usuarioLogueado,productosPasear})
             }
         }else {
-            res.render ("horaDePasear", {usuario: {tipo:"usuario"},productosPasear})
+            res.render ("horaDePasear", {usuarioLogueado: req.session.usuarioLogueado ,productosPasear})
         }
-        res.render('horaDePasear',{ productosPasear });
+        res.render('horaDePasear',{usuarioLogueado: req.session.usuarioLogueado,productosPasear });
     },
 }
 

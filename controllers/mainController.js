@@ -11,14 +11,18 @@ const mainController = {
             const usuarios = JSON.parse(usuariosJson);
             const user = usuarios.find (usuarioActual => usuarioActual.email == userEmail)
             if (user) {
-                res.render ("index", {usuario: user})
+                res.render ("index", {usuarioLogueado: req.session.usuarioLogueado}
+                )
             } else {
-                res.render ("index", {usuario: {tipo:"usuario"}})
+                res.render ("index", {usuarioLogueado: req.session.usuarioLogueado}
+                )
             }
         }else {
-            res.render ("index", {usuario: {tipo:"usuario"}})
+            res.render ("index", {usuarioLogueado: req.session.usuarioLogueado}
+            )
         }
-        res.render('index');
+        res.render('index',{usuarioLogueado: req.session.usuarioLogueado}
+        );
     },
     filosofia: function (req, res) {
         const userEmail = req.cookies.email;
@@ -27,14 +31,18 @@ const mainController = {
             const usuarios = JSON.parse(usuariosJson);
             const user = usuarios.find (usuarioActual => usuarioActual.email == userEmail)
             if (user) {
-                res.render ("filosofia", {usuario: user})
+                res.render ("filosofia", {usuarioLogueado: req.session.usuarioLogueado}
+                )
             } else {
-                res.render ("filosofia", {usuario: {tipo:"usuario"}})
+                res.render ("filosofia", {usuarioLogueado: req.session.usuarioLogueado}
+                )
             }
         }else {
-            res.render ("filosofia", {usuario: {tipo:"usuario"}})
+            res.render ("filosofia", {usuarioLogueado: req.session.usuarioLogueado}
+            )
         }
-        res.render('filosofia');
+        res.render('filosofia',{usuarioLogueado: req.session.usuarioLogueado}
+        );
     },
     contactanos: function (req, res) {
         const userEmail = req.cookies.email;
@@ -43,14 +51,18 @@ const mainController = {
             const usuarios = JSON.parse(usuariosJson);
             const user = usuarios.find (usuarioActual => usuarioActual.email == userEmail)
             if (user) {
-                res.render ("contactanos", {usuario: user})
+                res.render ("contactanos", {usuarioLogueado: req.session.usuarioLogueado}
+                )
             } else {
-                res.render ("contactanos", {usuario: {tipo:"usuario"}})
+                res.render ("contactanos", {usuarioLogueado: req.session.usuarioLogueado}
+                )
             }
         }else {
-            res.render ("contactanos", {usuario: {tipo:"usuario"}})
+            res.render ("contactanos", {usuarioLogueado: req.session.usuarioLogueado}
+            )
         }
-        res.render('contactanos');
+        res.render('contactanos',{usuarioLogueado: req.session.usuarioLogueado}
+        );
     },
 };
 

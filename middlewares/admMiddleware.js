@@ -1,7 +1,8 @@
 function admMiddleware(req, res, next) {
-    if (req.cookies.email = "ngonzalez@gmail.com") {
+  let usuarioLogueado = req.session.usuarioLogueado 
+    if (usuarioLogueado.tipo=="administrador") {
     } else {
-        res.send("Esta pagina es solo para el Administrador!")
+        res.render("soloAdministrador")
     };
     next();
 }

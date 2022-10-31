@@ -5,10 +5,12 @@ const bcryptjs = require("bcryptjs");
 
 const usuariosController = {
     login: function (req, res) {
-        res.render("login", { usuario: { tipo: "usuario" } });
+        res.render("login", {usuarioLogueado: req.session.usuarioLogueado}
+        );
     },
     register: function (req, res) {
-        res.render("register", { usuario: { tipo: "usuario" } });
+        res.render("register", {usuarioLogueado: req.session.usuarioLogueado}
+        );
     },
     postRegister: function (req, res) {
         console.log(req.body)
@@ -38,25 +40,39 @@ const usuariosController = {
         const usuarios = JSON.parse(usersJSON);
         const usuarioLogueado = usuarios.find(thisUser => thisUser.email === userData.mail); //busca el usuario con el email ingresado
         console.log(usuarioLogueado)
+        console.log("Hola");
         if (usuarioLogueado) { // si se encontro el usuario con ese email..
 
             let contraseñaCorrecta = bcryptjs.compareSync(userData.password, usuarioLogueado.password);
             // let contraseñaCorrecta = userData.password == usuarioLogueado.password  //chequeamos si la contraseña es correcta
-            if (contraseñaCorrecta) { // si es correcta...
-                res.cookie("email", req.body.email, { maxAge: 1080000 }); //creamos una cookie
+            if (contraseñaCorrecta) {// si es correcta...
+                if(req.body.recordarMail) {
+                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2 })
+                }
+                //res.clearCookie("email");
+                req.session.usuarioLogueado = usuarioLogueado;
+                //res.cookie("email", req.body.email, { maxAge: 1080000 }); //creamos una cookie
                 res.redirect("/"); //redireccionamos al index
-            } else { //si no es correcta
-                res.redirect("/usuarios/login") //te envia a loguearte
+            } else {
+                //si no es correcta
+                res.render("/usuarios/login", {
+                    errors: {
+                        password:
+                            { msg: "La contraseña no coincide con la registrada, por favor vuelva a ingresarla" }
+                    },
+                    oldData: req.body,
+                    usuarioLogueado: req.session.usuarioLogueado,
+                })
             }
         } else { // si no se encontro usuario con ese email
-            res.redirect("/usuarios/login")
+            res.redirect("/usuarios/register")
         }
     },
-    logout: function (req, res) {
-            res.clearCookie('Email');
+        logout: function (req, res) {
+            res.clearCookie("userEmail");
+            req.session.destroy();
             return res.redirect('/');
         }
     }
-
 
 module.exports = usuariosController;

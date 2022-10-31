@@ -21,16 +21,20 @@
         </div>
         <a href="/"><img src="/imagenes/logo achicado.jpg" alt="logo"></a>
         <div class="crearIniciarCarrito">
+            <% if (usuarioLogueado == undefined) { %>
                 <a href="/usuarios/register">Crear Sesión</a>
                 <p>  |  </p>
                 <a href="/usuarios/login">Iniciar Sesión</a>
-                <p>  |  </p>
-                <a href="/usuarios/logout">Cerrar Sesión</a>
-             
-
-
-            
+                <% } %>
+                <% if (usuarioLogueado != undefined) { %>
+                    <div class="usuario_logueado"><span>Hola <%=usuarioLogueado.nombre%> ! | <a href="/usuarios/logout">Cerrar Sesión</a></span>
+                    
+                    </div>
+            <% } %>
+            <% if (usuarioLogueado != undefined && usuarioLogueado.tipo == "usuario") { %>
             <div class="carrito"><a href="/productos/productCart"><i class="fa-solid fa-cart-shopping"></i></a></div>
+            <% } %>
+            
         </div>
     </div>
 
@@ -41,9 +45,10 @@
         <a href="../productos/horaDeComer">Hora de Comer</a>
         <a href="/filosofia">Filosofia</a>
         <a href="/contactanos">Contacto</a>
-        <% if (usuario.tipo="administrador") { %>
-         <a href="/administrador/productListAdministrador">Administrar</a>
-        <% } %>
+        <% if (usuarioLogueado != undefined && usuarioLogueado.tipo == "administrador") { %>
+            <a href="/administrador/productListAdministrador">Administrar</a>
+    <% } %>
+
          
     </div>
 

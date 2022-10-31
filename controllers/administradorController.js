@@ -82,14 +82,14 @@ const administradorController = {
                 const usuarios = JSON.parse(usuariosJson);
                 const user = usuarios.find(usuarioActual => usuarioActual.email == userEmail)
                 if (user) {
-                    res.render("productListAdministrador", { usuario: user, productos })
+                    res.render("productListAdministrador", {usuarioLogueado: req.session.usuarioLogueado, productos })
                 } else {
-                    res.render("productListAdministrador", { usuario: { tipo: "usuario" }, productos })
+                    res.render("productListAdministrador", { usuarioLogueado: req.session.usuarioLogueado,productos })
                 }
             } else {
-                res.render("productListAdministrador", { usuario: { tipo: "usuario" }, productos })
+                res.render("productListAdministrador", {usuarioLogueado: req.session.usuarioLogueado, productos })
             }
-            res.render('productListAdministrador', { productos, usuario });
+            res.render('productListAdministrador', { productos, usuarioLogueado: req.session.usuarioLogueado});
         },
 }
 

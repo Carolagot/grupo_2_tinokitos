@@ -1,5 +1,5 @@
 function authMiddleware(req, res, next) {
-    if (req.cookies.email != undefined) {
+    if (req.session.usuarioLogueado!==undefined) {
     } else {
         res.send("Esta pagina es solo para Usuarios!")
     }
