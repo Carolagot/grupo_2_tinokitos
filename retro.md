@@ -90,3 +90,4 @@ UTILIZAMOS MÉTODO ESTRELLA DE MAR: (Aprendizajes para futuras oportunidades de 
 5. **Dejar de hacer:**
 - No seguir avanzando cuando estamos trabados. es mejor continuar con otra funcionalidad y volver cuando ya estemos despejados.
 
+https://trello.com/b/canCzpZJ/proyecto-integrador-grupo-2
