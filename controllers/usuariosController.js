@@ -31,30 +31,26 @@ const usuariosController = {
         usuarios.push(nuevoUsuario);
         const usuariosActualizadosJSON = JSON.stringify(usuarios);
         fs.writeFileSync(path.join(__dirname, '../data/userBD.json'), usuariosActualizadosJSON, 'utf8');
-        res.cookie("email", req.body.email, { maxAge: 10800 });
         res.redirect("/usuarios/login");
     },
     loginProcess: (req, res) => {
         const userData = req.body; //guarda los datos ingresados en el formulario de login
         const usersJSON = fs.readFileSync(path.join(__dirname, "../data/userBD.json"), "utf-8"); //buscamos usuario en la base de datos
         const usuarios = JSON.parse(usersJSON);
-        const usuarioLogueado = usuarios.find(thisUser => thisUser.email === userData.mail); //busca el usuario con el email ingresado
-        console.log(usuarioLogueado)
+        const usuarioLogueado = usuarios.find(thisUser => thisUser.email === userData.email); //busca el usuario con el email ingresado
         if (usuarioLogueado) { // si se encontro el usuario con ese email..
 
             let contraseñaCorrecta = bcryptjs.compareSync(userData.password, usuarioLogueado.password);
             // let contraseñaCorrecta = userData.password == usuarioLogueado.password  //chequeamos si la contraseña es correcta
             if (contraseñaCorrecta) {// si es correcta...
                 if(req.body.recordarMail) {
-                    res.cookie('userEmail', req.body.email, {maxAge: 10800 })
+                    res.cookie('userEmail', req.body.email, {maxAge: (1000000000 * 60) * 2 });  //res.clearCookie("email");
                 }
-                //res.clearCookie("email");
                 req.session.usuarioLogueado = usuarioLogueado;
-                //res.cookie("email", req.body.email, { maxAge: 1080000 }); //creamos una cookie
                 res.redirect("/"); //redireccionamos al index
             } else {
                 //si no es correcta
-                res.render("/usuarios/login", {
+                res.render("/usuarios/login",{
                     errors: {
                         password:
                             { msg: "La contraseña no coincide con la registrada, por favor vuelva a ingresarla" }

@@ -25,7 +25,6 @@
                     <div class="contenedor-productos">
                         <% productos.forEach (producto=> { %>
                             <article>
-                                </a>
                                 <img src="<%= producto.fotoProducto %>" alt="<%= producto.nombre %>">
                                 <div class="texto">
                                     <a href="/administrador/editProduct/<%= producto.id %>">
@@ -34,7 +33,7 @@
                                         </h2>
                                     
                                     <h3>
-                                        <%= producto.precioProducto %>
+                                        <%= producto.precio %>
                                     </h3>
                                 </a>
                                 </div>

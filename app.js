@@ -29,8 +29,8 @@
     app.use  (methodOverride ("_method"));
     app.use  (cookieParser());
     app.use(session({secret: "Secreto",
-     resave: false,
-	saveUninitialized: false,}));
+    resave: false,
+	saveUninitialized: false}));
 
 	app.use("/", routeMain);//sirve para ir mas directo a las rutas y no tener que usar dentro de routes la palabra route.
     app.use("/usuarios", routeUsuario);

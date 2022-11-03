@@ -1,9 +1,10 @@
 function userLoggedMiddleware(req, res, next) {
-    res.locals.isLogged=false;
-    if (req.session && req.session.userLogged) {
-        res.locals.isLogged=true;
-        res.locals.userLogged= req.session.userLogged;
-    }
+    let usuarioLogueado = req.session.usuarioLogueado 
+    if (usuarioLogueado == undefined) {
+    } else {
+        return res.redirect("/")
+    };
     next();
 }
 module.exports = userLoggedMiddleware;
+

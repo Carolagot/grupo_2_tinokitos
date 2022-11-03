@@ -48,5 +48,25 @@
         "fotosUsuarios": "/imagenes/fotosUsuarios/1667141733963-beautiful-woman-avatar-character-icon-free-vector (1).jpg",
         "notificaciones": "on",
         "tipo": "usuario"
+    },
+    {
+        "id": 1667225633263,
+        "nombre": "Micaela",
+        "email": "mica@hotmail.com",
+        "telefono": "4902",
+        "password": "$2a$10$vUtIjxMkCtuMGyrAQAkLqeATvDj/kJlcLCLx/QB/7PVU9bVYYLbp2",
+        "fotosUsuarios": "/imagenes/fotosUsuarios/1667225632809-beautiful-woman-avatar-character-icon-free-vector (1).jpg",
+        "notificaciones": "on",
+        "tipo": "usuario"
+    },
+    {
+        "id": 1667226274019,
+        "nombre": "Nacho",
+        "email": "nacho@hotmail.com",
+        "telefono": "333333",
+        "password": "$2a$10$FtQ4GAw8siBey3OKE0vs9ekfiXXcPk/hctNv5qFlxZLj0ObxPa05W",
+        "fotosUsuarios": "/imagenes/fotosUsuarios/1667226273091-111.jpg",
+        "notificaciones": "on",
+        "tipo": "administrador"
     }
 ]

@@ -21,18 +21,16 @@
                     <div class="contenedor-productos">
                         <% productos.forEach (producto=> { %>
                             <article>
-                                </a>
                                 <img src="<%= producto.fotoProducto %>" alt="<%= producto.nombre %>">
                                 <div class="texto">
                                     <a href="/productos/productDetail/<%= producto.id %>">
                                         <h2>
                                             <%= producto.nombre %>
                                         </h2>
-                                    
-                                    <h3>
-                                        <%= producto.precioProducto %>
-                                    </h3>
-                                </a>
+                                        <h3>
+                                            <%= producto.precio %>
+                                        </h3>
+                                    </a>
                                 </div>
                             </article>
                             <% }) %>
