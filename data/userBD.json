@@ -68,5 +68,14 @@
         "fotosUsuarios": "/imagenes/fotosUsuarios/1667226273091-111.jpg",
         "notificaciones": "on",
         "tipo": "administrador"
+    },
+    {
+        "id": 1668082491585,
+        "nombre": "Melisa Steinberg",
+        "email": "melist82@hotmail.com",
+        "telefono": "03425039688",
+        "password": "$2a$10$T8Hx317lnG5od8HAD/77CeQiUi8DaIUC.JbAkIfbdhkkrI3liPZYy",
+        "fotosUsuarios": "/imagenes/fotosUsuarios/1668082491433-Support.ico",
+        "tipo": "usuario"
     }
 ]
