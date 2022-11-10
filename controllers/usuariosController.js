@@ -31,6 +31,7 @@ const usuariosController = {
         };
        
         const errors = validationResult (req);
+        console.log(errors);
         if (!errors.isEmpty() ) {
             res.render("register", {usuarioLogueado: req.session.usuarioLogueado, mensajesDeError: errors.mapped(), old: req.body});
         } else {

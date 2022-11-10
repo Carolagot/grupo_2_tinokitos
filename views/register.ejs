@@ -1,65 +1,68 @@
-   
-   
-   
-   <%- include("./partials/head") %>
+<%- include("./partials/head") %>
     <link rel="stylesheet" href="/css/stylesRegister.css">
     <title>Tinokitos Register</title>
-</head>
+    </head>
 
-<body>
-    <%-include("./partials/header")%>
+    <body>
+        <%-include("./partials/header")%>
 
-    <main class="organizando">
-        <section class="contenedor1">
-            <img src=".\imagenes\registro.jpg">
-        </section>
-        <section class="contenedor2">
-            <% if (locals.errors){
-                errors.forEach(error=>{ %>
-                <p class= "errores"> <%=
-                error.msg %> </p>
-            <% }) 
-            } %>
+            <main class="organizando">
+                <section class="contenedor1">
+                    <img src=".\imagenes\registro.jpg">
+                </section>
+                <section class="contenedor2">
+                            <form action="/usuarios/register" method="POST" enctype="multipart/form-data">
+                                <div>
+                                    <% if (locals.errors){ errors.forEach(error=>{ %>
+                                        <p class="errores">
+                                            <%= error.msg %>
+                                        </p>
+                                        <% }) } %>
+                                    <h4 class="formato"> NOMBRE Y APELLIDO</h4>
+                                    <input class="registro1" type="text" name="nombre" placeholder="Nombre y Apellido"
+                                        value="<%= locals.old && old.nombre ? old.nombre: '' %>">
+                                    <h4 class="formato"> MAIL </h4>
+                                    <input class="registro1" type="email" name="email" placeholder="E-mail"
+                                        value="<%= locals.old && old.email ? old.email: '' %>">
+                                    <h4 class="formato">TELÉFONO</h4>
+                                    <input class="registro1" type="number" name="telefono" placeholder="Telefono"
+                                        value="<%= locals.old && old.telefono ? old.telefono: '' %>">
+                                    <h4 class="formato">CONTRASEÑA</h3>
+                                        <input class="registro1" type="password" name="password"
+                                            value="<%= locals.old && old.password ? old.password: '' %>">
+                                        <h4 class="formato">CONFIRMAR CONTRASEÑA</h3>
+                                            <input class="registro1" type="password" name="confirmarPassword"
+                                                value="<%= locals.old && old.confirmarPassword ? old.confirmarPassword: '' %>">
+                                            <h4 class="formato">FOTO DE PERFIL</h3>
+                                                <input class="registro1" type="file" name="fotosUsuarios"
+                                                    value="<%= locals.old && old.fotosUsuarios ? old.fotosUsuarios: '' %>">
+                                </div>
+                                <div>
+                                    <label class="formato2"><input type="radio" name="notificaciones"><strong> Quiero
+                                            recibir
+                                            notificaciones</strong></label>
+                                    <br>
+                                </div>
+                                <br>
+                                <div class="formato3">
 
-            <form action="/usuarios/register" method="POST" enctype="multipart/form-data"
-            >
-                <div>
-                    <h4 class="formato"> NOMBRE Y APELLIDO</h4>
-                    <input class="registro1" type="text" name="nombre" placeholder="Nombre y Apellido" value="<%= locals.old && old.nombre ? old.nombre: '' %>">
-                    <h4 class="formato"> MAIL </h4>
-                    <input class="registro1" type="email" name="email" placeholder="E-mail" value="<%= locals.old && old.email ? old.email: '' %>">
-                    <h4 class="formato">TELÉFONO</h4>
-                    <input class=registro1 type="number" name="telefono" placeholder="Telefono" value="<%= locals.old && old.telefono ? old.telefono: '' %>">
-                    <h4 class="formato">CONTRASEÑA</h3>
-                        <input class="registro1" type="password" name="password" value="<%= locals.old && old.password ? old.password: '' %>">
-                        <h4 class="formato">CONFIRMAR CONTRASEÑA</h3>
-                            <input class="registro1" type="password" name="confirmarPassword" value="<%= locals.old && old.confirmarPassword ? old.confirmarPassword: '' %>">
-                            <h4 class="formato">FOTO DE PERFIL</h3>
-                                <input class="registro1" type="file" name="fotosUsuarios" value="<%= locals.old && old.fotosUsuarios ? old.fotosUsuarios: '' %>">        
-                </div>
-                <div>
-                    <label class="formato2"><input type="radio" name="notificaciones"><strong> Quiero recibir
-                        notificaciones</strong></label>
-                    <br>
-                </div>
-                <br>
-                <div class="formato3">
-                    
-                    <input class="cuenta" type="submit" value="Crear cuenta">
-                    <input class="borrar" type="reset" value="Borrar">
-                    <a href="/"><input class="volver"  value="Volver al inicio"></a>
-                </div>
-                </form>
-                
-            <div class="iniciar">
-                <h4>¿Ya tenes una cuenta?</h4>
-                <a href="/usuarios/login"><h4 class="subrayado">Iniciar sesión</h4></a>
-            </div>
-        </section>
-    </main>
-    <%-include("./partials/footer")%>
+                                    <input class="cuenta" type="submit" value="Crear cuenta">
+                                    <input class="borrar" type="reset" value="Borrar">
+                                    <a href="/"><input class="volver" value="Volver al inicio"></a>
+                                </div>
+                            </form>
 
-</body>
+                            <div class="iniciar">
+                                <h4>¿Ya tenes una cuenta?</h4>
+                                <a href="/usuarios/login">
+                                    <h4 class="subrayado">Iniciar sesión</h4>
+                                </a>
+                            </div>
+                </section>
+            </main>
+            <%-include("./partials/footer")%>
+
+    </body>
 
 
-</html>
+    </html>
