@@ -19,20 +19,19 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 //validaciones de Registro de usuario
-/*const validateUserForm = [
+const validateUserForm = [
     body("nombre").notEmpty().withMessage("Debés completar tu nombre y apellido"),
-    body("email").notEmpty().withMessage("Debés completar tu email").bail(),
-    body("telefono").notEmpty().withMessage("Debés completar tu teléfono").bail(),
-    body("password").notEmpty().isLength ({min:5}).withMessage("Debés completar tu contraseña").bail(),
-    body("confirmarPassword").notEmpty().isLength ({min:5}).withMessage("Debés confirmar la contraseña").bail(),
+    body("email").notEmpty().withMessage("Debés completar tu email"),
+    body("telefono").notEmpty().withMessage("Debés completar tu teléfono"),
+    body("password").notEmpty().isLength ({min:5}).withMessage("Debés completar tu contraseña"),
+    body("confirmarPassword").notEmpty().isLength ({min:5}).withMessage("Debés confirmar la contraseña"),
     body("fotosUsuarios").notEmpty().withMessage("Debés cargar tu foto")
 
 ]
-*/
 
 router.get("/login", userLoggedMiddleware, usuariosController.login);
 router.get("/register", userLoggedMiddleware, usuariosController.register);
-router.post("/register", userLoggedMiddleware, upload.single("fotosUsuarios"), usuariosController.postRegister);
+router.post("/register", userLoggedMiddleware, validateUserForm, upload.single("fotosUsuarios"), usuariosController.postRegister);
 router.post("/login", userLoggedMiddleware, usuariosController.loginProcess);
 router.get('/logout', usuariosController.logout)
 

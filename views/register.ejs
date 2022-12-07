@@ -13,8 +13,14 @@
                 <section class="contenedor2">
                     <form action="/usuarios/register" method="POST" enctype="multipart/form-data">
                         <div>
+                            <% if (locals.errors){ errors.forEach(error=>{ %>
+                                <p class="errores">
+                                    <%= error.msg %>
+                                </p>
+                                <% }) } %>
+
                             <h4 class="formato"> NOMBRE Y APELLIDO</h4>
-                            <input class="registro1" type="text" name="nombre" placeholder="Nombre y Apellido" required
+                            <input class="registro1" type="text" name="nombre" placeholder="Nombre y Apellido"
                                 value="<%= locals.old && old.nombre ? old.nombre: '' %>">
 
 

@@ -43,14 +43,14 @@ const usuariosController = {
         };
 
 
-        if (!errors.isEmpty()) {
-            res.render("register", { usuarioLogueado: req.session.usuarioLogueado, errors: errors.mapped(), old: req.body });
-        } else {
+        if (errors.isEmpty()) {
             usuarios.push(nuevoUsuario);
             const usuariosActualizadosJSON = JSON.stringify(usuarios);
             console.log (__dirname)
             fs.writeFileSync(path.join(__dirname, '../data/userBD.json'), usuariosActualizadosJSON, 'utf8');
             res.redirect("/usuarios/login");
+            } else {
+            res.render("register", { usuarioLogueado: req.session.usuarioLogueado, errors: errors.mapped(), old: req.body });
                }
     },
 
