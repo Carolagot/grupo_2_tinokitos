@@ -293,6 +293,11 @@ footer {
             margin-left: 10px;
         }
 
+        .errores{
+            color: red;
+            font-size: 10px;
+        }
+        
         .subrayado {
             text-decoration: underline;
             margin-left: 20px;

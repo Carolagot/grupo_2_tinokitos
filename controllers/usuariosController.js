@@ -2,6 +2,7 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const bcryptjs = require("bcryptjs");
+const {validationResult} = require ('express-validator');
 
 const usuariosController = {
     login: function (req, res) {
@@ -13,7 +14,7 @@ const usuariosController = {
         );
     },
     postRegister: function (req, res) {
-        console.log(req.body)
+        console.log(req.body);
         const usuariosJson = fs.readFileSync(path.join(__dirname, '../data/userBD.json'), 'utf-8');
         const usuarios = JSON.parse(usuariosJson);
         const constraseñaHasheada = bcryptjs.hashSync(req.body.password, 10);
@@ -28,11 +29,18 @@ const usuariosController = {
             notificaciones: req.body.notificaciones,
             tipo: "usuario"
         };
+       
+        const errors = validationResult (req);
+        console.log(errors);
+        if (!errors.isEmpty() ) {
+            res.render("register", {usuarioLogueado: req.session.usuarioLogueado, mensajesDeError: errors.mapped(), old: req.body});
+        } else {
         usuarios.push(nuevoUsuario);
         const usuariosActualizadosJSON = JSON.stringify(usuarios);
         fs.writeFileSync(path.join(__dirname, '../data/userBD.json'), usuariosActualizadosJSON, 'utf8');
         res.redirect("/usuarios/login");
-    },
+    }},
+
     loginProcess: (req, res) => {
         const userData = req.body; //guarda los datos ingresados en el formulario de login
         const usersJSON = fs.readFileSync(path.join(__dirname, "../data/userBD.json"), "utf-8"); //buscamos usuario en la base de datos
