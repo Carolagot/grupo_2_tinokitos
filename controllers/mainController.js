@@ -9,16 +9,16 @@ const mainController = {
         if (userEmail) {
             const usuariosJson = fs.readFileSync(path.join(__dirname, '../data/userBD.json'), 'utf-8');
             const usuarios = JSON.parse(usuariosJson);
-            const user = usuarios.find (usuarioActual => usuarioActual.email == userEmail)
+            const user = usuarios.find(usuarioActual => usuarioActual.email == userEmail)
             if (user) {
-                res.render ("index", {usuarioLogueado: req.session.usuarioLogueado}
+                res.render("index", { usuarioLogueado: req.session.usuarioLogueado }
                 )
             } else {
-                res.render ("index", {usuarioLogueado: req.session.usuarioLogueado}
+                res.render("index", { usuarioLogueado: req.session.usuarioLogueado }
                 )
             }
-        }else {
-            res.render ("index", {usuarioLogueado: req.session.usuarioLogueado}
+        } else {
+            res.render("index", { usuarioLogueado: req.session.usuarioLogueado }
             )
         }
     },
@@ -27,16 +27,16 @@ const mainController = {
         if (userEmail) {
             const usuariosJson = fs.readFileSync(path.join(__dirname, '../data/userBD.json'), 'utf-8');
             const usuarios = JSON.parse(usuariosJson);
-            const user = usuarios.find (usuarioActual => usuarioActual.email == userEmail)
+            const user = usuarios.find(usuarioActual => usuarioActual.email == userEmail)
             if (user) {
-                res.render ("filosofia", {usuarioLogueado: req.session.usuarioLogueado}
+                res.render("filosofia", { usuarioLogueado: req.session.usuarioLogueado }
                 )
             } else {
-                res.render ("filosofia", {usuarioLogueado: req.session.usuarioLogueado}
+                res.render("filosofia", { usuarioLogueado: req.session.usuarioLogueado }
                 )
             }
-        }else {
-            res.render ("filosofia", {usuarioLogueado: req.session.usuarioLogueado}
+        } else {
+            res.render("filosofia", { usuarioLogueado: req.session.usuarioLogueado }
             )
         }
     },
@@ -45,16 +45,16 @@ const mainController = {
         if (userEmail) {
             const usuariosJson = fs.readFileSync(path.join(__dirname, '../data/userBD.json'), 'utf-8');
             const usuarios = JSON.parse(usuariosJson);
-            const user = usuarios.find (usuarioActual => usuarioActual.email == userEmail)
+            const user = usuarios.find(usuarioActual => usuarioActual.email == userEmail)
             if (user) {
-                res.render ("contactanos", {usuarioLogueado: req.session.usuarioLogueado}
+                res.render("contactanos", { usuarioLogueado: req.session.usuarioLogueado }
                 )
             } else {
-                res.render ("contactanos", {usuarioLogueado: req.session.usuarioLogueado}
+                res.render("contactanos", { usuarioLogueado: req.session.usuarioLogueado }
                 )
             }
-        }else {
-            res.render ("contactanos", {usuarioLogueado: req.session.usuarioLogueado}
+        } else {
+            res.render("contactanos", { usuarioLogueado: req.session.usuarioLogueado }
             )
         }
     },

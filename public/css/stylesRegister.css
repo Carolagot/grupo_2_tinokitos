@@ -295,9 +295,13 @@ footer {
 
         .errores{
             color: red;
-            font-size: 10px;
+            font-size: 14px;
         }
-        
+
+        .textDanger{
+            color: red;
+            font-size: 14px;
+        }
         .subrayado {
             text-decoration: underline;
             margin-left: 20px;

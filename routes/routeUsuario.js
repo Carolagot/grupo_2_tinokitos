@@ -3,7 +3,7 @@ const router = express.Router();
 const multer = require("multer");
 const path = require("path");
 const usuariosController = require("../controllers/usuariosController");
-const { body }= require("express-validator");
+const { body } = require("express-validator");
 const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware')
 
 const storage = multer.diskStorage({
@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
         cb(null, path.join(__dirname, '../public/imagenes/fotosUsuarios'));
     },
     filename: function (req, file, cb) {
-        let fotoNew =  Date.now() + '-' + file.originalname;
+        let fotoNew = Date.now() + '-' + file.originalname;
 
         cb(null, fotoNew);
     }
@@ -19,21 +19,21 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 //validaciones de Registro de usuario
-const validateUserForm = [
-    body("nombre").notEmpty().withMessage("Debés completar tu nombre y apellido").bail(),
-    body("email").notEmpty().isEmail().withMessage("Debés completar tu email").bail(),
+/*const validateUserForm = [
+    body("nombre").notEmpty().withMessage("Debés completar tu nombre y apellido"),
+    body("email").notEmpty().withMessage("Debés completar tu email").bail(),
     body("telefono").notEmpty().withMessage("Debés completar tu teléfono").bail(),
     body("password").notEmpty().isLength ({min:5}).withMessage("Debés completar tu contraseña").bail(),
     body("confirmarPassword").notEmpty().isLength ({min:5}).withMessage("Debés confirmar la contraseña").bail(),
-    body("fotosUsuarios").notEmpty().withMessage("Debés cargar tu foto").bail(),
+    body("fotosUsuarios").notEmpty().withMessage("Debés cargar tu foto")
 
 ]
-
+*/
 
 router.get("/login", userLoggedMiddleware, usuariosController.login);
-router.get("/register",userLoggedMiddleware, usuariosController.register);
-router.post("/register", userLoggedMiddleware,validateUserForm, upload.single("fotosUsuarios"), usuariosController.postRegister);
-router.post("/login",userLoggedMiddleware, usuariosController.loginProcess);
-router.get('/logout',usuariosController.logout)
+router.get("/register", userLoggedMiddleware, usuariosController.register);
+router.post("/register", userLoggedMiddleware, upload.single("fotosUsuarios"), usuariosController.postRegister);
+router.post("/login", userLoggedMiddleware, usuariosController.loginProcess);
+router.get('/logout', usuariosController.logout)
 
 module.exports = router;
